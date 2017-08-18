@@ -150,7 +150,6 @@ Response.java (Java POJO)
         public String getChallenge_ts() {
             return challenge_ts;
         }
-
         public void setChallenge_ts(String challenge_ts) {
             this.challenge_ts = challenge_ts;
         }
@@ -158,7 +157,6 @@ Response.java (Java POJO)
         public String getHostname() {
             return hostname;
         }
-
         public void setHostname(String hostname) {
             this.hostname = hostname;
         }
@@ -166,7 +164,6 @@ Response.java (Java POJO)
         public boolean isSuccess() {
             return success;
         }
-
         public void setSuccess(boolean success) {
             this.success = success;
         }
