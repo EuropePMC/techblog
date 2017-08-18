@@ -1,8 +1,10 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
-date:   2015-11-17 16:16:01 -0600
-categories: jekyll update
+title:  "Add Google reCAPTCHA to Your Website"
+date:   2017-08-18
+categories: security
 ---
 
 <h1>Add Google reCAPTCHA to Your Website</h1>
+
+reCAPTCHA is a free service that protects your site from spam and abuse.
