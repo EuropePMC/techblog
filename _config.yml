@@ -1,8 +1,3 @@
 theme: jekyll-theme-architect
 baseurl: /techblog
 url: https://europepmc.github.io
-
-# Includes an icon in the footer for each user name you enter
-footer-links:
-  github: barryclark
-  twitter: baznyc
