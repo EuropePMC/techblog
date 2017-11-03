@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Remote debug Ruby on Rails running in a Docker using RubyMine"
+title:  "Remote debug Ruby on Rails running in a Docker container using RubyMine"
 date:   2017-11-03
 categories: rails
 ---
@@ -23,11 +23,11 @@ Note: for Ruby SDK used by RubyMine, we are just using a local Ruby interpreter 
 
 # Below are the detailed steps as a demo
 
-## 1. Start the docker
+## 1. Start the docker container
 
     docker run --name rails-demo -p 1234:1234 -p 3080:3000 -it ruby bash
 
-## 2. Steps inside the docker
+## 2. Steps inside the docker container
 
 Be sure you have the following gems in your Gemfile, and better to comment out gem pry-byebug if it's there, to avoid possible interference.
 
@@ -50,7 +50,7 @@ Click plus sign '+' to add new configuration, and choose Ruby remote debug.
 
 ![RubyMine Debuger Settings][debugger]
 
-Fill the form as shown above and click the Debug button. Now you'll see in the docker the Rails server gets started:
+Fill the form as shown above and click the Debug button. Now you'll see in the docker container the Rails server gets started:
 
     /home/hello_rails# rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
     Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta10, file filtering is supported) listens on 0.0.0.0:1234
@@ -66,7 +66,7 @@ Fill the form as shown above and click the Debug button. Now you'll see in the d
 
 Now, you can set breakpoints in RubyMine, and start remote debugging it :-)
 
-Go to browser with URL: http://localhost:3080/say/hi (Note port 3080 is mapped from 3000, see above the command of starting docker)
+Go to browser with URL: http://localhost:3080/say/hi (Note port 3080 is mapped from 3000, see above the command of starting the docker container)
 
 The breakpoint is hit as shown below, where you can inspect variables, etc.
 
