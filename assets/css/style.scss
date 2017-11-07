@@ -3,10 +3,22 @@
 
 @import "{{ site.theme }}";
 
+h1.project-name 
+
+	a {
+		color: inherit
+	}
+
+	a:hover {
+		text-decoration: none;
+		opacity: .8;
+	}
+}
+
 li {
 	margin-top: .5rem
 }
 
 .site-footer {
-	background: url({{ site.baseurl}}/assets/epmc-logo-single.png) no-repeat right bottom
+	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom
 }
