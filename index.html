@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<h1>Welcome to Europe PMC Tech Blog</h1>
-
-Here you can find techy stuff from Europe PMC.
-
+<h1>Welcome to {{ site.title | default: site.github.repository_name }}</h1>
+<p>Here you can find {{ site.description | default: site.github.project_tagline }}</p>
+<h2>Latest posts:</h2>
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} [{{ post.date | date_to_string }}]</a>
     </li>
   {% endfor %}
 </ul>
