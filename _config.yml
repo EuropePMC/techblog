@@ -1,3 +1,5 @@
-theme: jekyll-theme-architect
+theme: jekyll-theme-cayman
 baseurl: /techblog
 url: https://europepmc.github.io
+title: Europe PMC techblog
+description: techy stuff from Europe PMC
