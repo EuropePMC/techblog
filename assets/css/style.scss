@@ -3,6 +3,14 @@
 
 @import "{{ site.theme }}";
 
+.main-content :first-child {
+    margin-top: inherit;
+}
+
+.main-content > :first-child {
+    margin-top: 0;
+}
+
 h1.project-name {
 
 	a {
@@ -19,6 +27,41 @@ li {
 	margin-top: .5rem
 }
 
+.date {
+	font-size: .9em;
+	margin-top: 1.5rem;
+	text-align: right;
+}
+
+.post-excerpt {
+	border-bottom: solid 1px #eff0f1;
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	
+	&:last-of-type {
+		border-bottom: 0
+	}
+
+	.post-excerpt-date {
+		font-size: .9em;
+		display: inline;
+		vertical-align: 3px;
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: solid 1px #eff0f1;
+	}
+
+	.post-excerpt-title {
+		display: inline;
+	}
+}
+
 .site-footer {
-	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom
+	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom;
+
+	@media screen and (max-width: 650px) {
+		text-align: center;
+		padding-bottom: 65px;
+		background-position: center bottom;
+	}
 }

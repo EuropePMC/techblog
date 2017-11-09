@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-<h1>Welcome to {{ site.title | default: site.github.repository_name }}</h1>
-<p>Here you can find {{ site.description | default: site.github.project_tagline }}</p>
-<h2>Latest posts:</h2>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} [{{ post.date | date_to_string }}]</a>
-    </li>
-  {% endfor %}
-</ul>
+<h1>Latest posts:</h1>
+{% for post in site.posts %}
+<section class="post-excerpt">
+	<p class="post-excerpt-date">{{ post.date | date_to_string}}</p><h2 class="post-excerpt-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.content | truncatewords: 75 | replace: '<h3', '<h4'  | replace: 'h3>', 'h4>' | replace: '<h2', '<h3'  | replace: 'h2>', 'h3>' }}
+    <p><a href="{{ site.baseurl }}{{ post.url }}">Continue reading</a></p>
+</section>
+{% endfor %}

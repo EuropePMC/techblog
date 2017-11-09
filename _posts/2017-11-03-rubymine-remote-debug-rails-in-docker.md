@@ -9,7 +9,7 @@ categories: rails
 
 This article is written about how one can use RubyMine to remote debug a Ruby on Rails application that even runs inside a Docker container.
 
-# Versions of software in our environment
+## Versions of software in our environment
 
  - RubyMine 2017.2.4 (Build #RM-172.4155.44, built on September 26, 2017)
  - Ruby inside docker (ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux])
@@ -21,17 +21,17 @@ Note: for Ruby SDK used by RubyMine, we are just using a local Ruby interpreter 
 
 ![Ruby SDK and Gems settings 2][sdk2]
 
-# Below are the detailed steps as a demo
+## Below are the detailed steps as a demo
 
-## 1. Start the docker container
+### 1. Start the docker container
 
     docker run --name rails-demo -p 1234:1234 -p 3080:3000 -it ruby bash
 
-## 2. Steps inside the docker container
+### 2. Steps inside the docker container
 
 Be sure you have the following gems in your Gemfile, and better to comment out gem pry-byebug if it's there, to avoid possible interference.
 
-    # gem 'pry-byebug'
+    ## gem 'pry-byebug'
     gem 'debase', '0.2.2.beta10'
     gem 'ruby-debug-ide'
 
@@ -41,9 +41,9 @@ Update the dependencies of your application if necessary
 
 Start your rails server
 
-    /home/hello_rails# rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
+    /home/hello_rails## rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
 
-# 3. Remote debug from RubyMine
+## 3. Remote debug from RubyMine
 Now start RubyMine, Run -> Debug... -> Edit Configurations...
 
 Click plus sign '+' to add new configuration, and choose Ruby remote debug.
@@ -52,7 +52,7 @@ Click plus sign '+' to add new configuration, and choose Ruby remote debug.
 
 Fill the form as shown above and click the Debug button. Now you'll see in the docker container the Rails server gets started:
 
-    /home/hello_rails# rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
+    /home/hello_rails## rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s
     Fast Debugger (ruby-debug-ide 0.6.0, debase 0.2.2.beta10, file filtering is supported) listens on 0.0.0.0:1234
     => Booting Puma
     => Rails 5.1.4 application starting in development 
@@ -74,7 +74,7 @@ The breakpoint is hit as shown below, where you can inspect variables, etc.
 
 One more caveat worth mentioning is that you need to be sure the web server puma starts in single mode. For me the cluster mode does not work for remote debugging, where you'll have errors like "terminating timed out worker". For development, single mode should be good enough.
 
-# References:
+## References:
 
  1. [JetBrains RubyMine remote debugging](https://www.jetbrains.com/help/ruby/remote-debugging.html)
  2. [Running the Rails debugger in a Docker container using RubyMine](http://bzzt.io/posts/running-the-rails-debugger-in-a-docker-container-using-rubymine)
