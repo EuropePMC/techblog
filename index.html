@@ -6,6 +6,6 @@ layout: default
 <section class="post-excerpt">
 	<p class="post-excerpt-date">{{ post.date | date_to_string}}</p><h2 class="post-excerpt-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     {{ post.content | truncatewords: 75 | replace: '<h3', '<h4'  | replace: 'h3>', 'h4>' | replace: '<h2', '<h3'  | replace: 'h2>', 'h3>' }}
-    <p><a href="{{ site.baseurl }}{{ post.url }}">Continue reading</a></p>
+    <p><a href="{{ site.baseurl }}{{ post.url }}">Continue reading &rsaquo;</a></p>
 </section>
 {% endfor %}

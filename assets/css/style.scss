@@ -58,6 +58,7 @@ li {
 
 .site-footer {
 	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom;
+	margin-top: 0;
 
 	@media screen and (max-width: 650px) {
 		text-align: center;
