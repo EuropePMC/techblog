@@ -3,14 +3,6 @@
 
 @import "{{ site.theme }}";
 
-.main-content :first-child {
-    margin-top: inherit;
-}
-
-.main-content > :first-child {
-    margin-top: 0;
-}
-
 h1.project-name {
 
 	a {
@@ -23,14 +15,71 @@ h1.project-name {
 	}
 }
 
+.btn {
+	margin: 1rem auto;
+
+	@media screen and (min-width: 64em) {
+		margin-bottom: -2rem;
+	}
+}
+
+.btn.epmc{
+	padding-left: 2rem;
+	background-image: url({{ site.baseurl }}/assets/epmc-logo.png); 
+	background-repeat: no-repeat;
+	background-position: .5rem center;
+	background-size: 22px;
+
+	@media screen and (max-width: 42em) {
+		background-position: calc(50% - 46px) center;
+	}
+}
+
+.main-content {
+
+	& :first-child {
+    	margin-top: inherit;
+    }
+	
+	& > :first-child {
+    	margin-top: 0;
+	}
+}
+
 li {
 	margin-top: .5rem
 }
 
-.date {
-	font-size: .9em;
-	margin-top: 1.5rem;
+.site-footer {
+	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom;
+
+	@media screen and (max-width: 650px) {
+		text-align: center;
+		padding-bottom: 65px;
+		background-position: center bottom;
+	}
+}
+
+.metadata {
+	font-size: .85em;
+	margin-top: 3rem;
 	text-align: right;
+}
+
+.category {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+	h2, p {
+		margin-top: 0;
+		margin-bottom: 0
+	}
+	h2 {
+		margin-right: 30px;
+	}
+	& ~ .category {
+		margin-top: 1rem;
+	}
 }
 
 .post-excerpt {
@@ -52,17 +101,22 @@ li {
 	}
 
 	.post-excerpt-title {
-		display: inline;
+		display: inline
 	}
-}
 
-.site-footer {
-	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom;
-	margin-top: 0;
+	.excerpt-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
 
-	@media screen and (max-width: 650px) {
-		text-align: center;
-		padding-bottom: 65px;
-		background-position: center bottom;
+		.metadata {
+			text-align: left;
+			font-size: .8em;
+			margin-top: 0;
+		}
+	}
+
+	& ~ .site-footer {
+		margin-top: 0;
 	}
 }

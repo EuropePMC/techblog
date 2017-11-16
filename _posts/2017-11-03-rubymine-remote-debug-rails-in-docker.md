@@ -2,7 +2,8 @@
 layout: post
 title:  "Remote debug Ruby on Rails running in a Docker container using RubyMine"
 date:   2017-11-03
-categories: rails
+author: yuci
+category: rails
 ---
 
 [RubyMine](https://www.jetbrains.com/ruby/) brings a sophisticated [debugger](https://www.jetbrains.com/ruby/features/ruby_debugger.html) with a graphical UI for Ruby, JS, and CoffeeScript. You can set breakpoints and run your code step by step with all the information at your fingertips, without having to modify your code as [Pry](https://github.com/pry/pry).

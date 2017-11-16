@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% assign author = site.data.authors[page.author] %}
+{% assign category = site.blog_categories | where: "slug", page.category %}
+{% assign category = category[0] %}
 
 <article class="post">
 
@@ -10,8 +13,9 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  <div class="metadata">
+    <p>Written on {{ page.date | date: "%e %B %Y" }}, by <a href="{{ author.web }}" target ="_blank">{{ author.name }}</a>{% if category %}, in <a href="{{ site.baseurl }}{{ category.url }}">{{ category.name }}</a>{% endif %}
+	</p>
   </div>
 
 </article>

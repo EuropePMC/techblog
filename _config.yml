@@ -3,3 +3,7 @@ baseurl: /techblog
 url: https://europepmc.github.io
 title: Europe PMC Tech Blog
 description: techy stuff from Europe PMC
+collections:
+  blog_categories:
+    output: true
+    permalink: /techblog/categories/:name/
