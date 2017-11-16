@@ -2,6 +2,7 @@
 layout: post
 title:  "Behavior-Driven Development in Bioinformatics"
 date:   2017-11-07
+author: rakesh
 categories: qa
 ---
 
