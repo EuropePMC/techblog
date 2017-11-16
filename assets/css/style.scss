@@ -6,13 +6,26 @@
 h1.project-name {
 
 	a {
-		color: inherit
+		color: inherit;
 	}
 
 	a:hover {
 		text-decoration: none;
 		opacity: .8;
 	}
+
+	img {
+		vertical-align: -8px;
+		margin-right: 5px;
+
+		@media screen and (max-width: 64em) and (min-width: 42em) {
+			max-height: 50px;
+		}
+		@media screen and (max-width: 42em) {
+			max-height: 40px;
+		}
+	}
+
 }
 
 .btn {
@@ -25,7 +38,7 @@ h1.project-name {
 
 .btn.epmc{
 	padding-left: 2rem;
-	background-image: url({{ site.baseurl }}/assets/epmc-logo.png); 
+	background-image: url({{ site.baseurl }}/images/epmc-logo.png); 
 	background-repeat: no-repeat;
 	background-position: .5rem center;
 	background-size: 22px;
@@ -51,7 +64,7 @@ li {
 }
 
 .site-footer {
-	background: url({{ site.baseurl }}/assets/epmc-logo-single.png) no-repeat right bottom;
+	background: url({{ site.baseurl }}/images/epmc-logo-single.png) no-repeat right bottom;
 	padding-top: 0;
 
 	@media screen and (max-width: 650px) {
