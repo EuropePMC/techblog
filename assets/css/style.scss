@@ -16,13 +16,15 @@ h1.project-name {
 
 	img {
 		vertical-align: -8px;
-		margin-right: 5px;
+		margin-right: 10px;
 
 		@media screen and (max-width: 64em) and (min-width: 42em) {
 			max-height: 50px;
+			margin-right: 6px;
 		}
 		@media screen and (max-width: 42em) {
 			max-height: 40px;
+			margin-right: 5px;
 		}
 	}
 
