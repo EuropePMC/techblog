@@ -2,7 +2,7 @@
 layout: post
 title:  "Swagger documentation customization"
 date:   2017-11-21
-author: ftalo
+author: francesco
 categories: documentation
 ---
 
@@ -32,20 +32,20 @@ To achieve that it is necessary to perform the following steps:
   	<link href='./swagger-ui/css/reset.css' media='print' rel='stylesheet' type='text/css'/>
   	<link href='./swagger-ui/css/print.css' media='print' rel='stylesheet' type='text/css'/>
 
-  <script src='./swagger-ui/lib/object-assign-pollyfill.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/jquery.slideto.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/jquery.wiggle.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/handlebars-4.0.5.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/lodash.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/backbone-min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/swagger-ui.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/jsoneditor.min.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/marked.js' type='text/javascript'></script>
-  <script src='./swagger-ui/lib/swagger-oauth.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/object-assign-pollyfill.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/jquery.slideto.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/jquery.wiggle.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/handlebars-4.0.5.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/lodash.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/backbone-min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/swagger-ui.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/jsoneditor.min.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/marked.js' type='text/javascript'></script>
+  	<script src='./swagger-ui/lib/swagger-oauth.js' type='text/javascript'></script>
  </head>
    .....
 {% endhighlight %} 
@@ -68,6 +68,7 @@ To achieve that it is necessary to perform the following steps:
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
       }
+      
       window.swaggerUi = new SwaggerUi({
         url: "https://www.ebi.ac.uk/europepmc/annotations_api/v2/api-docs.json",
         dom_id: "swagger-ui-container",
