@@ -20,9 +20,9 @@ One potential option could be copying manually the HTML produced from Swagger in
 Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application in order not to worry about synchronization.
 To achieve that it is necessary to perform the following steps:
 
- 1. Download the Swagger UI folder from [GitHub][4]
- 2. Once downloaded create a swagger-ui folder in the resources folder of the external web application and add the contents downloaded from the Github Repository in this folder.
- 3. In the header of the html page where to incorporate the Swagger documentation import the following CSS and javascript files:
+ - Download the Swagger UI folder from [GitHub][4]
+ - Once downloaded create a swagger-ui folder in the resources folder of the external web application and add the contents downloaded from the Github Repository in this folder.
+ - In the header of the html page where to incorporate the Swagger documentation import the following CSS and javascript files:
 {% highlight html %}
 <head>
          .....
@@ -49,8 +49,7 @@ To achieve that it is necessary to perform the following steps:
  </head>
    .....
 {% endhighlight %} 
-
- 4. In the body of the same html page it is necessary to place a div where the Swagger documentation will be placed and then call the Swagger specific function to load the relevant API documentation 
+ - In the body of the same html page it is necessary to place a div where the Swagger documentation will be placed and then call the Swagger specific function to load the relevant API documentation 
 {% highlight html %}
  <body>
 	.....
@@ -171,8 +170,7 @@ Below there's the list of the properties that it is possible to set for the  Swa
 </tr>
 </tbody>
 </table>	
-
- 5. Now it is possible to customize the standard style of the Swagger documentation tweaking both the default Swagger css and the site application css as required. 
+ - Now it is possible to customize the standard style of the Swagger documentation tweaking both the default Swagger css and the site application css as required. 
 	An example of the result can be found at [Europe PMC Annotations API documentation page][5]
 
 
