@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Swagger documentation customization"
+title:  "Swagger documentation customisation"
 date:   2017-11-21
 author: francesco
 categories: documentation
@@ -89,7 +89,7 @@ To achieve that it is necessary to perform the following steps:
 </body>
 {% endhighlight %} 
 
-The javascript object SwaggerUi will load the API documentation described at the value specified inside the url property and will place it inside the dom identified by the dom_id property value.
+The javascript object SwaggerUi will load the API documentation described through the url property and will place it inside the dom identified by the dom_id property value.
 Below there's the list of the properties that it is possible to set for the  SwaggerUi object:
 
 <table>
