@@ -6,19 +6,19 @@ author: francesco
 categories: documentation
 ---
 
-[Swagger][1] is a popular developer tool that helps developers to build RESTful APIs through their entire lifecycle, from design and documentation, to test and deployment. 
-This post will focus on how to incorporate the API documentation generated through Swagger inside an HTML page hosted from another web application.
+[Swagger][1] is a popular software framework that helps developers build RESTful Web services through their entire lifecycle, from design and documentation, to test and deployment. 
+This post focuses on how to incorporate the API documentation generated through Swagger inside an HTML page hosted from another web application.
 
-One of the main features of Swagger is producing interactive documentation for a RESTful API. Swagger can be used in conjunction with a multitude of different languages/frameworks.
+One of the main features of Swagger is producing interactive documentation for a RESTful API. Swagger can be used in conjunction with a multitude of different languages and frameworks.
 It will always produce two different outputs inside the same web application hosting the API:
 
- 1. a default HTML page having a standard Swagger style. ([Europe PMC Annotations API Swagger standard html page] [2])
- 2. a JSON file that will contain the description of the generated documentation ([Europe PMC Annotations API documentation descriptor][3])
+ 1. A default HTML page having a standard Swagger style. ([Europe PMC Annotations API Swagger standard html page] [2])
+ 2. A JSON file that will contain the description of the generated documentation ([Europe PMC Annotations API documentation descriptor][3])
 
 The goal is to display the Swagger HTML documentation inside an external web site page adapting Swagger default style to the one of the external site. 
-One potential option could be copying manually the HTML produced from Swagger inside the external site page. The obvious disadvantage of this solution will be that it will be necessary to keep in synch the Swagger code contained into the RESTful API web application with the content shown in the external page every time that a modification to the documentation is performed.
-Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application in order not to worry about synchronization.
-To achieve that it is necessary to perform the following steps:
+One option could be to copy manually the HTML produced from Swagger inside the external site page. The obvious disadvantage of this solution will be that it will be necessary to keep in synch the Swagger code contained into the RESTful API web application with the content shown in the external page every time that a modification to the documentation is performed.
+Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application mitigating synchronization issues.
+To this end it is necessary to perform the following steps:
 
  - Download the Swagger UI folder from [GitHub][4]
  - Once downloaded create a swagger-ui folder in the resources folder of the external web application and add the contents downloaded from the Github Repository in this folder.
