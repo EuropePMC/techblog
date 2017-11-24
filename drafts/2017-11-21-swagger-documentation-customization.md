@@ -15,13 +15,13 @@ It will always produce two different outputs inside the same web application hos
  1. A default HTML page having a standard Swagger style. ([Europe PMC Annotations API Swagger standard html page] [2])
  2. A JSON file that will contain the description of the generated documentation ([Europe PMC Annotations API documentation descriptor][3])
 
-The goal is to display the Swagger HTML documentation inside an external web site page adapting Swagger default style to the one of the external site. 
-One option could be to copy manually the HTML produced from Swagger inside the external site page. The obvious disadvantage of this solution will be that it will be necessary to keep in synch the Swagger code contained into the RESTful API web application with the content shown in the external page every time that a modification to the documentation is performed.
-Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application mitigating synchronization issues.
+The goal is to display the Swagger HTML documentation inside an external web site page adapting Swagger's default style to the one of the external site. 
+One option could be to copy manually the HTML produced from Swagger inside the external site page. The obvious disadvantage of this solution is that it will be necessary to keep the Swagger code contained into the RESTful API web application in sync with the content shown in the external page, each time a modification to the documentation is performed.
+Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application, to avoid synchronization issues.
 To this end it is necessary to perform the following steps:
 
- - Download the Swagger UI folder from [GitHub][4]
- - Once downloaded create a swagger-ui folder in the resources folder of the external web application and add the contents downloaded from the Github Repository in this folder.
+ - Download the Swagger UI folder from: [GitHub][4]
+ - Once downloaded, create a swagger-ui folder in the resources folder of the external web application and add the contents downloaded from the Github Repository in this folder.
  - In the header of the html page where to incorporate the Swagger documentation import the following CSS and javascript files:
 {% highlight html %}
 <head>
@@ -90,7 +90,7 @@ To this end it is necessary to perform the following steps:
 {% endhighlight %} 
 
 The javascript object SwaggerUi will load the API documentation described through the url property and will place it inside the dom identified by the dom_id property value.
-Below there's the list of the properties that it is possible to set for the  SwaggerUi object:
+Below are details of the properties that can be set to the SwaggerUi object:
 
 <table>
 <thead>
