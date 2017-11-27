@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Swagger documentation customisation"
-date:   2017-11-21
+date:   2017-11-27
 author: francesco
-categories: documentation
+category: documentation
 ---
 
 [Swagger][1] is a popular software framework that helps developers build RESTful Web services through their entire lifecycle, from design and documentation, to test and deployment. 
