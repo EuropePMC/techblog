@@ -57,35 +57,34 @@ To this end it is necessary to perform the following steps:
 	<div id="swagger-ui-container"></div>
 	
 	<script type="text/javascript">
-    jQuery(function () {
 	
-      hljs.configure({
-        highlightSizeThreshold: 5000
-      });
+		jQuery(function () {
+			hljs.configure({
+				highlightSizeThreshold: 5000
+			});
 
-      // Pre load translate...
-      if(window.SwaggerTranslator) {
-        window.SwaggerTranslator.translate();
-      }
-      
-      window.swaggerUi = new SwaggerUi({
-        url: "https://www.ebi.ac.uk/europepmc/annotations_api/v2/api-docs.json",
-        dom_id: "swagger-ui-container",
-        supportedSubmitMethods: ['get'],
-        docExpansion: "list",
-        jsonEditor: false,
-        defaultModelRendering: 'example',
-        showRequestHeaders: false,
-        showOperationIds: false,
-        validatorUrl:null
-      });
+			// Pre load translate...
+			if(window.SwaggerTranslator) {
+				window.SwaggerTranslator.translate();
+			}
+	  
+			window.swaggerUi = new SwaggerUi({
+				url: "https://www.ebi.ac.uk/europepmc/annotations_api/v2/api-docs.json",
+				dom_id: "swagger-ui-container",
+				supportedSubmitMethods: ['get'],
+				docExpansion: "list",
+				jsonEditor: false,
+				defaultModelRendering: 'example',
+				showRequestHeaders: false,
+				showOperationIds: false,
+				validatorUrl:null
+			});
 
-      window.swaggerUi.load();
-  });
-  
-  
-  </script>  
-	....
+			window.swaggerUi.load();
+		});
+	</script>  
+	
+	...
 </body>
 {% endhighlight %} 
 
