@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Swagger documentation customisation"
-date:   2017-11-21
+date:   2017-11-27
 author: francesco
-categories: documentation
+category: documentation
 ---
 
 [Swagger][1] is a popular software framework that helps developers build RESTful Web services through their entire lifecycle, from design and documentation, to test and deployment. 
@@ -177,4 +177,4 @@ Below are details of the properties that can be set to the SwaggerUi object:
   [2]: https://www.ebi.ac.uk/europepmc/annotations_api/swagger-ui.html
   [3]: https://www.ebi.ac.uk/europepmc/annotations_api/v2/api-docs.json
   [4]: https://github.com/swagger-api/swagger-ui/tree/2.x/dist
-  [5]: http://europepmc.org/AnnotationsApi
+  [5]: https://europepmc.org/AnnotationsApi
