@@ -50,6 +50,16 @@ h1.project-name {
 	}
 }
 
+h1 #rss_container {
+	vertical-align: baseline;
+	svg #rss_icon {
+		fill: #606c71;
+	}
+	svg:hover #rss_icon {
+		fill: #FF6600;
+	}
+}
+
 .main-content {
 
 	& :first-child {

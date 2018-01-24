@@ -7,3 +7,5 @@ collections:
   blog_categories:
     output: true
     permalink: /techblog/categories/:name/
+plugins:
+  - jekyll-feed
