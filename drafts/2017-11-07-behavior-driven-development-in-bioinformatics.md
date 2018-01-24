@@ -23,7 +23,7 @@ A simple BDD scenario / requirement is as follows:
     Then I should be able to see the matching results on the Search Result page
 {% endhighlight %}
 
-## How BDD works?
+## How does BDD work?
 !['BDD Framework'][bdd1]
 
 ## Benefits of BDD
