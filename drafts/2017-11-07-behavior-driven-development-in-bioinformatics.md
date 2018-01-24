@@ -8,12 +8,12 @@ categories: testing
 
 ## What is BDD?
 
-<b>Behavior-Driven Development (BDD)</b> is a set of Software Engineering practices designed to help teams deliver more valuable and high-quality software features.
+**Behavior-Driven Development (BDD)** is a set of Software Engineering practices designed to help teams deliver more valuable and higher quality software features.
 
-It adopts general techniques and principles of <b>Test Driven Development [TDD]</b> with ideas from domain-driven design. BDD incrementally builds functionality guided by the expected behavior.
+It adopts general techniques and principles of [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD) with ideas from [Domain-driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD). BDD incrementally builds functionality guided by expected behavior.
 
 A simple BDD scenario / requirement is as follows:
-{% highlight html %}
+{% highlight java %}
   @TC01_EPMC_SearchTest
   Scenario: Specific Search by Keyword
     Given I am researcher
@@ -27,35 +27,33 @@ A simple BDD scenario / requirement is as follows:
 !['BDD Framework'][bdd1]
 
 ## Benefits of BDD
-<ul style="line-height:95%">
-<li>Understandable by both Technical & Non-Technical people</li>
-<li>Business Analyst (BA) /Subject Matter Expert (SME) can contribute while creating BDD scenarios</li>
-<li>Data can be fed along with the scenarios, which can updated any time without any changes in scripting</li>
-<li>Developers can write the scripts in a language of their choice</li>
-<li>Attractive Test reports at the end of the execution [HTML and JSON]</li>
-<li>Availability of easy and Continuous Integration tools like Jenkins, Bamboo, etc...</li>
-<li>Single platform for Web, Mobile, API, Thick client & Database Testing</li>
-</ul>
+* Understandable by both technical and non-technical people
+* Business Analysts (BA) and Subject Matter Experts (SME) can contribute BDD scenarios
+* Data can be fed along with the scenarios, which can updated any time without any changes in scripting
+* Developers can write the scripts in a language of their choice
+* Attractive test reports at the end of the execution [HTML and JSON]
+* Availability of Continuous Integration tools like Jenkins, Bamboo, etc...
+* Single platform for Web, Mobile, API, thick client, and Database Testing
 
-## How BDD fits in Agile/DevOps environment
+## How BDD fits in an Agile/DevOps environment
 !['BDD Diagram'][bdd2]
 
-After Story grooming on the first day of the Sprint both the Developer & Test teams will have the frozen Acceptance Criteria for each User Story identified for the current sprint. Developer(s) should prepare BDD scenarios as per the acceptance criteria with the scope being limited to unit level testing. Further QA or the domain expert will write the functional scenarios for each of the acceptance criteria in the user story. Both Unit and Functional BDD scenarios may or may not contain negative scenarios. All the Test case design techniques like Equivalent Partitioning, Boundary Value Analysis, and Decision Table can be applied while writing the BDD scenarios.
+After story grooming on the first day of a new sprint, the developer and test teams will agree on frozen acceptance criteria for each user story identified for the sprint. Developers should prepare BDD scenarios as per the acceptance criteria, with the scope being limited to unit-level testing. QA testers or the domain expert will write the functional scenarios for each of the acceptance criteria in the user story. Both Unit and Functional BDD scenarios may or may not contain negative scenarios. Test case design techniques such as [Equivalence Partitioning](https://en.wikipedia.org/wiki/Equivalence_partitioning), [Boundary Value Analysis](https://en.wikipedia.org/wiki/Boundary-value_analysis), and [Decision Tables](https://en.wikipedia.org/wiki/Decision_table) can be applied while writing the BDD scenarios.
 
-As a best practice, BDD functional scenarios should be sent to the BA or SME for sign-off prior to the Test Scripting. Both Development and automation test scripting activities can be carried out in parallel based on the agreement with the front-end developers, on how the UI elements on the page look like and what the element’s characteristics are for the script to act upon.
+As a best practice, BDD functional scenarios should be sent to the BA or SME for sign-off prior to test scripting. Both development and automation test scripting activities can be carried out in parallel, based on agreement with front-end developers, on how the UI elements on the page look and what the element’s characteristics are for the script to act upon.
 
-For instance, assume the agile team is going to work on a user story for the Europe PMC Login screen. Both the UI/front-end developer and QA Automation team must agree up on unique element locator like id=<i>’ login–email ’</i> for the ‘ Email ’ field, id=<i>’ login–password ’</i> for the ‘Password’ field etc. shown as below as in the below figure.
+For instance, assume the agile team is going to work on a user story for the Europe PMC login screen. Both the UI/front-end developer and QA automation team must agree on a unique element locator like `id="login–email"` for the 'Email' field, `id=login–password` for the 'Password' field, etc. (see the figure, below).
 
-Using this technique, the QA team will not have to wait until the development team completes the front-end and back-end development processes to start test scripting. Once the actual build is available for Testing, the QA team can run the automated test script and fast tract the QA tasks and detect the defects during the early stages of the Sprint.
+Using this technique, the QA team will not have to wait until the development team completes the front-end and back-end development processes to start test scripting. Once the actual build is available for testing, the QA team can run the automated test script and fast track the QA tasks, detecting defects during the early stages of the sprint.
 
 !['BDD Object Identification'][bdd3]
 
-## ‘Magic’ behind the scenes?
-You might wonder how the plain English text will trigger the Test execution. The answer to that question is the ‘Cucumber’ tool as it is smart enough to parse the plain text scenarios. Cucumber will either generate a function skeleton or call the respective function for each step in the given scenario (see below).
+## 'Magic' behind the scenes?
+Developers might wonder how plain English text will trigger test execution. The answer to that question is a tool called [Cucumber](https://cucumber.io/), which is smart enough to parse plain text scenarios. Cucumber will either generate a function skeleton or call the respective function for each step in the given scenario (see below).
 
-<strong> Java Steps: </strong>
+### Java Steps:
 <!-- !['BDD Java Code'][bdd4] -->
-{% highlight html %}
+{% highlight java %}
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -94,8 +92,8 @@ public class MyStepDefinitions {
 }
 {% endhighlight %}
 
-<strong> JavaScript Steps: </strong>
-{% highlight html %}
+### JavaScript Steps: 
+{% highlight javascript %}
 module.exports = function () {
 
   this.Given(/^I am researcher$/, function (callback) {
@@ -121,8 +119,8 @@ module.exports = function () {
 };
 {% endhighlight %}
 
-<strong> Ruby Steps: </strong>
-{% highlight html %}
+### Ruby Steps:
+{% highlight ruby %}
 Given /^I am researcher$/ do 
     # do something
 end
@@ -145,7 +143,7 @@ end
 {% endhighlight %}
 
 Once the function skeleton is ready, the script needs to be enhanced according to the step definition using UI automation tools like Selenium, Protractor or Appium as shown below.
-{% highlight html %}
+{% highlight java %}
     @Given("^I am researcher$")
     public void i_am_researcher() throws Throwable {
         opens_home_page();
@@ -173,10 +171,10 @@ Once the function skeleton is ready, the script needs to be enhanced according t
         printMessage("Successful");
     }
 {% endhighlight %}
-In the above example, Java programming language is used along with Selenium and jUnit.
+In the above example, Java is used along with Selenium and jUnit.
 
-## How to parameterize the BDD Test?
-{% highlight html %}
+### How to parameterize the BDD Test
+{% highlight java %}
   @TC_01_SearchTest
   Scenario Outline: Specific Search by Keyword
     Given I am researcher
@@ -193,23 +191,22 @@ In the above example, Java programming language is used along with Selenium and 
 {% endhighlight %}
 
 ## Reports
-
-By default Cucumber, generates the HTML report and you can configure the JSON report if you wish. Cucumber-JVM is equipped to convert the JSON report displayed as below in Jenkins using the <b>Cucumber Reports</b> plugin.
+By default, Cucumber generates an HTML report, and you can configure a JSON report if you wish. Cucumber-JVM is equipped to convert the JSON report displayed as below in Jenkins using the [Cucumber Reports](https://plugins.jenkins.io/cucumber-reports) plugin.
 
 !['BDD Cucumber Report'][bdd5]
 
-The <b>Serenity BDD Framework</b>, (popular Java based open source framework) used for the BDD implementation, will provide the enhanced report, as shown below.
+The [Serenity BDD Framework](http://www.thucydides.info/) (a popular Java based open source framework), when used for the BDD implementation, will provide an enhanced report, as shown below.
 
 !['BDD Serenity Report1'][bdd6]
 !['BDD Serenity Report2'][bdd7]
-It is also smart enough to capture the screenshot according to the user settings.
+It is also smart enough to capture a screenshot according to user settings.
 
-## Conclusion
-<b>BDD</b> become popular and widely used by many big companies due to its transparency and readability of the application behaviour.
+## TL;DR
+**Behavior-Driven Development (BDD)** is a test-driven software development process that is becoming popular and widely used by Europe PMC and by many organizations, due to its transparency, and the readability of the application behaviour.
 
-## References
-<a href="https://cucumber.io/">https://cucumber.io/</a><br>
-<a href="http://www.thucydides.info/#/">http://www.thucydides.info/#/</a>
+### Useful links:
+* [Cucumber](https://cucumber.io/)
+* [Serenity](http://www.thucydides.info/)
  
 
   [bdd1]: {{ site.baseurl }}/images/posts/behavior-driven-development-in-bioinformatics/bdd1.JPG
