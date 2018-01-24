@@ -24,7 +24,7 @@ A simple BDD scenario / requirement is as follows:
 {% endhighlight %}
 
 ## How does BDD work?
-!['BDD Framework'][bdd1]
+[!['BDD Framework'][bdd1]][bdd1]
 
 ## Benefits of BDD
 * Understandable by both technical and non-technical people
@@ -36,7 +36,7 @@ A simple BDD scenario / requirement is as follows:
 * Single platform for Web, Mobile, API, thick client, and Database Testing
 
 ## How BDD fits in an Agile/DevOps environment
-!['BDD Diagram'][bdd2]
+[!['BDD Diagram'][bdd2]][bdd2]
 
 After story grooming on the first day of a new sprint, the developer and test teams will agree on frozen acceptance criteria for each user story identified for the sprint. Developers should prepare BDD scenarios as per the acceptance criteria, with the scope being limited to unit-level testing. QA testers or the domain expert will write the functional scenarios for each of the acceptance criteria in the user story. Both Unit and Functional BDD scenarios may or may not contain negative scenarios. Test case design techniques such as [Equivalence Partitioning](https://en.wikipedia.org/wiki/Equivalence_partitioning), [Boundary Value Analysis](https://en.wikipedia.org/wiki/Boundary-value_analysis), and [Decision Tables](https://en.wikipedia.org/wiki/Decision_table) can be applied while writing the BDD scenarios.
 
@@ -46,7 +46,7 @@ For instance, assume the agile team is going to work on a user story for the Eur
 
 Using this technique, the QA team will not have to wait until the development team completes the front-end and back-end development processes to start test scripting. Once the actual build is available for testing, the QA team can run the automated test script and fast track the QA tasks, detecting defects during the early stages of the sprint.
 
-!['BDD Object Identification'][bdd3]
+[!['BDD Object Identification'][bdd3]][bdd3]
 
 ## 'Magic' behind the scenes?
 Developers might wonder how plain English text will trigger test execution. The answer to that question is a tool called [Cucumber](https://cucumber.io/), which is smart enough to parse plain text scenarios. Cucumber will either generate a function skeleton or call the respective function for each step in the given scenario (see below).
@@ -193,12 +193,12 @@ In the above example, Java is used along with Selenium and jUnit.
 ## Reports
 By default, Cucumber generates an HTML report, and you can configure a JSON report if you wish. Cucumber-JVM is equipped to convert the JSON report displayed as below in Jenkins using the [Cucumber Reports](https://plugins.jenkins.io/cucumber-reports) plugin.
 
-!['BDD Cucumber Report'][bdd5]
+[!['BDD Cucumber Report'][bdd5]][bdd5]
 
 The [Serenity BDD Framework](http://www.thucydides.info/) (a popular Java based open source framework), when used for the BDD implementation, will provide an enhanced report, as shown below.
 
-!['BDD Serenity Report1'][bdd6]
-!['BDD Serenity Report2'][bdd7]
+[!['BDD Serenity Report1'][bdd6]][bdd6]
+[!['BDD Serenity Report2'][bdd7]][bdd7]
 It is also smart enough to capture a screenshot according to user settings.
 
 ## TL;DR
