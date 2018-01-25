@@ -34,7 +34,7 @@ When a user submits the form, you need to get the user response token from the `
 
 Below is the sample code on the server side.
 
- - User summits a Wicket form (Wicket 6 in this example):
+ - User submits a Wicket form (Wicket 6 in this example):
 
 {% highlight java %}
 protected void onSubmit() {
