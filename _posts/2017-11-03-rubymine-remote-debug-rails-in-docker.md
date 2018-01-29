@@ -16,6 +16,8 @@ This article is written about how one can use RubyMine to remote debug a Ruby on
  - Ruby inside docker (ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-linux])
  - Ruby SDK and Gems used by RubyMine (ruby-2.4.2-p198)
 
+ <!--more-->
+
 Note: for Ruby SDK used by RubyMine, we are just using a local Ruby interpreter /usr/bin/ruby, not a remote one. (See below)
 
 ![Ruby SDK and Gems settings 1][sdk1]

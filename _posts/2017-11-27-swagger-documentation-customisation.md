@@ -15,6 +15,8 @@ It will always produce two different outputs inside the same web application hos
  1. A default HTML page having a standard Swagger style. ([Europe PMC Annotations API Swagger standard html page] [2])
  2. A JSON file that will contain the description of the generated documentation ([Europe PMC Annotations API documentation descriptor][3])
 
+ <!--more-->
+
 The goal is to display the Swagger HTML documentation inside an external web site page adapting Swagger's default style to the one of the external site. 
 One option could be to copy manually the HTML produced from Swagger inside the external site page. The obvious disadvantage of this solution is that it will be necessary to keep the Swagger code contained into the RESTful API web application in sync with the content shown in the external page, each time a modification to the documentation is performed.
 Ideally the content of the Swagger documentation should be displayed in the external page loading it dynamically from the RESTful API application, to avoid synchronization issues.

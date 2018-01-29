@@ -3,7 +3,7 @@ layout: post
 title:  "Behavior-Driven Development in Bioinformatics"
 date:   2018-01-29
 author: rakesh
-categories: testing
+category: testing
 ---
 
 ## What is BDD?
@@ -22,6 +22,8 @@ A simple BDD scenario / requirement is as follows:
     And Click on the Search button
     Then I should be able to see the matching results on the Search Result page
 {% endhighlight %}
+
+<!--more-->
 
 ## How does BDD work?
 [!['BDD Framework'][bdd1]][bdd1]

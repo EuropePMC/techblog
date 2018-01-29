@@ -22,6 +22,8 @@ First, paste the snippet below `<script...></script>` before the closing </head>
 {% endhighlight %} 
 Then paste the snippet below `<div...></div>` at the end of the <form> where you want the reCAPTCHA widget to appear, for example:
 
+<!--more-->
+
 {% highlight html %}
     <div class="g-recaptcha" data-sitekey="{your public site key given by Google reCAPTCHA}"></div>
 </form>
