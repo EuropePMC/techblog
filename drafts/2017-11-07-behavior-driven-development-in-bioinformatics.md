@@ -202,7 +202,7 @@ The [Serenity BDD Framework](http://www.thucydides.info/) (a popular Java based 
 It is also smart enough to capture a screenshot according to user settings.
 
 ## TL;DR
-**Behavior-Driven Development (BDD)** is a test-driven software development process that is becoming popular and widely used by Europe PMC and by many organizations, due to its transparency, and the readability of the application behaviour.
+**Behavior-Driven Development (BDD)** is emerged from test-driven software development process that is becoming popular and widely used by Europe PMC and by many organizations, due to its transparency, and the readability of the application behaviour.
 
 ### Useful links:
 * [Cucumber](https://cucumber.io/)
