@@ -6,7 +6,7 @@ layout: default
 {% assign category = category[0] %}
 
 <article class="post">
-
+  <div class="sharethis-inline-share-buttons"></div>
   <h1>{{ page.title }}</h1>
 
   <div class="entry">
@@ -17,5 +17,5 @@ layout: default
     <p>Written on {{ page.date | date: "%e %B %Y" }}, by <a href="{{ author.web }}" target ="_blank">{{ author.name }}</a>{% if category %}, in <a href="{{ site.baseurl }}{{ category.url }}">{{ category.name }}</a>{% endif %}
 	</p>
   </div>
-
+  <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a8d7d2ad57467001383cd9b&product=inline-share-buttons"></script>
 </article>

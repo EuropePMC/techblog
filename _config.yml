@@ -3,10 +3,14 @@ baseurl: /techblog
 url: https://europepmc.github.io
 title: Europe PMC Tech Blog
 description: techy stuff from Europe PMC
+google_analytics: UA-114538088-1
 collections:
   blog_categories:
     output: true
-    permalink: /techblog/categories/:name/
+    permalink: /categories/:name/
 excerpt_separator: <!--more-->
+paginate: 10
+paginate_path: "/page/:num/"
 plugins:
   - jekyll-feed
+  - jekyll-paginate

@@ -31,9 +31,11 @@ h1.project-name {
 }
 
 .btn {
+	margin: 10px auto;
 	margin: 1rem auto;
 
 	@media screen and (min-width: 64em) {
+		margin-bottom: -20px;
 		margin-bottom: -2rem;
 	}
 }
@@ -72,7 +74,8 @@ h1 #rss_container {
 }
 
 li {
-	margin-top: .5rem
+	margin-top: 5px;
+	margin-top: .5rem;
 }
 
 .site-footer {
@@ -88,6 +91,7 @@ li {
 
 .metadata {
 	font-size: .85em;
+	margin-top: 30px;
 	margin-top: 3rem;
 	text-align: right;
 }
@@ -99,10 +103,11 @@ li {
 	
 	h2, p {
 		margin-top: 0;
-		margin-bottom: 0
+		margin-bottom: 0;
 	}
 	h2 {
 		margin-right: 30px;
+		margin-right: 3rem;
 	}
 	& ~ .category {
 		margin-top: 1rem;
@@ -115,7 +120,7 @@ li {
 	margin-bottom: 2rem;
 	
 	&:last-of-type {
-		border-bottom: 0
+		border-bottom: 0;
 	}
 
 	.post-excerpt-date {
@@ -128,7 +133,11 @@ li {
 	}
 
 	.post-excerpt-title {
-		display: inline
+		display: inline;
+
+		& + * {
+			margin-top: 1em;
+		}
 	}
 
 	.excerpt-bottom {
@@ -145,6 +154,23 @@ li {
 
 	& ~ .site-footer {
 		margin-top: 0;
+		padding-top: 20px;
 	    padding-top: 2rem;
+	}
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 20px;
+	margin-top: -2rem;
+	padding: 1em 0;
+	font-size: .9em;
+	border-top: solid 1px #eff0f1;
+	* {
+		padding: 0 3px;
+	}
+
+	.current_page {
+
 	}
 }
