@@ -130,6 +130,11 @@ Gatling or JMeter
 
 Considering the multiple iterations in the Agile/DevOps model, **Testing** is one of the most important phases of software delivery and to fast track the testing process, automated functional & non-functional test-scripts are in high demand. In the ideal scenario, each Agile team may have at least one QA resource who ensures the Testing activities for the current sprint as well as taking care of the existing functionalities through the Regression Tests. It is also very clear that Test Automation is not the responsibility of a DevOps engineer whereas he/she will concentrate only on the **Infrastructure Automation** rather than enhance your **codebase**.
 
+### Useful links
+* [Test Pyramid](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
+* [BDD Serenity](http://www.thucydides.info/#/)
+* [Gatling](https://gatling.io/)
+
   [testing1]: {{ site.baseurl }}/images/posts/importance-of-software-testing-in-ci-cd/TEST1.JPG
   [testing2]: {{ site.baseurl }}/images/posts/importance-of-software-testing-in-ci-cd/TEST2.JPG
   [testing3]: {{ site.baseurl }}/images/posts/importance-of-software-testing-in-ci-cd/TEST3.JPG
