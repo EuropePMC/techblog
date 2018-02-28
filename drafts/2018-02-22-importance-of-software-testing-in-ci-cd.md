@@ -16,7 +16,7 @@ Testing is mainly classified into two types, **Functional Testing** and **Non-Fu
 [!['Testing in DevOps'][testing1]][testing1]
 [!['Testing in DevOps'][testing2]][testing2]
 
-As per the **Test Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.
+As per the **Testing Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.
 
 ## Testing Strategy in the DevOps culture [Java-based development]
 [!['Testing in DevOps'][testing3]][testing3]
@@ -131,7 +131,7 @@ Gatling or JMeter
 Considering the multiple iterations in the Agile/DevOps model, **Testing** is one of the most important phases of software delivery and to fast track the testing process, automated functional & non-functional test-scripts are in high demand. In the ideal scenario, each Agile team may have at least one QA resource who ensures the Testing activities for the current sprint as well as taking care of the existing functionalities through the Regression Tests. It is also very clear that Test Automation is not the responsibility of a DevOps engineer whereas he/she will concentrate only on the **Infrastructure Automation** rather than enhance your **codebase**.
 
 ### Useful links
-* [Test Pyramid](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
+* [Testing Pyramid](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 * [BDD Serenity](http://www.thucydides.info/#/)
 * [Gatling](https://gatling.io/)
 
