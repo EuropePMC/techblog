@@ -11,7 +11,7 @@ categories: testing
 
 Software Testing is necessary because we all make mistakes. Some of those mistakes are unimportant, but some of them are expensive or dangerous. We need to check everything and anything we produce because things can always go wrong.
 
-Testing is mainly classified into two types i.e., **Functional Testing** and **Non-Functional Testing**.
+Testing is mainly classified into two types, **Functional Testing** and **Non-Functional Testing**.
 
 [!['Testing in DevOps'][testing1]][testing1]
 [!['Testing in DevOps'][testing2]][testing2]
@@ -24,7 +24,7 @@ As per the **Test Pyramid** concept displayed above, around 70% of testing effor
 ## Sample Build Pipeline model along with Software Testing steps
 [!['Testing in DevOps'][testing4]][testing4]
 
-In the above build pipeline model, there are three pre-production servers i.e. Development, Testing and Staging. Normally DEV server will be used for all the development activities, with the Testing or System Integration Server (SIT) for Functional Testing activities for the Quality Assurance (QA) Team and Staging Server for the Performance Testing as well as for the User Acceptance Testing (UAT) activities. On some occasions, there will only be DEV, TEST and PROD servers available. In such cases, internal testing and UAT will happen on the TEST Server itself.
+In the above build pipeline model, there are three pre-production servers i.e. Development (DEV), Testing and Staging. Normally DEV server will be used for all the development activities, with the Testing or System Integration Server (SIT) for Functional Testing activities for the Quality Assurance (QA) Team and Staging Server for the Performance Testing as well as for the User Acceptance Testing (UAT) activities. On some occasions, there will only be DEV, TEST and PROD servers available. In such cases, internal testing and UAT will happen on the TEST Server itself.
 
 You might have noticed the build pipeline steps ‘Sanity Tests’ & ‘Regression Tests’ from the Pipeline sample displayed above. Sanity Tests consist of critical functionalities of an application and are required to run every commit to make sure the critical business functionalities are not affected. Whereas Regression Tests are the superset of the Sanity Test Suite that will normally run in the Test Environment for every new deployment.
 
@@ -45,12 +45,12 @@ In Unit Testing, the scope of testing is limited to that particular unit or comp
 
 **Tools / Framework:**
 
-**Junit** and **TestNG** Unit Testing Frameworks are quite popular for the Java based development environment and for Ruby, **RSpc** is widely used. For the front-end, frameworks like **ember.js** already have an integrated unit testing provision to implement the unit tests. Whereas **Karma** – Test Runner is commonly used in AngularJS-based development environments to run the JavaScript-based Unit Tests. **Mocha** is an alternative for the front-end Unit Testing solution. In the JavaScript world, **Protractor** along with the **Jasmine** unit testing framework (BDD-based) is widely using.
+**Junit** and **TestNG** Unit Testing Frameworks are popular for the Java based development environment and for Ruby, **RSpc** is widely used. For the front-end, frameworks like **ember.js** already have an integrated unit testing provision to implement the unit tests. Whereas **Karma** – Test Runner is commonly used in AngularJS-based development environments to run the JavaScript-based Unit Tests. **Mocha** is an alternative for the front-end Unit Testing solution. In the JavaScript world, **Protractor** along with the **Jasmine** unit testing framework (BDD-based) are widely used.
 
 
 ## System Integration Testing
 
-System Integration Testing will touch multiple units/components and it is a black box Testing. People who perform this testing do not really want to know the logic behind it.
+System Integration Testing (SIT) will touch multiple units/components and is a black box Testing method. People who perform this testing do not want to know the logic behind it.
 
 Normally within the Sprint, Manual Testing will be the first step of the **System Integration Test**. Later on, this will convert to an Automated Test script. If there is a dedicated Automation Testing resource available in the Agile team, then an Automation Test script can be developed in parallel to the development activities. The Automated Test script will fast-track the regression testing prior to each release or every commit in the Continuous Integration / Continuous Deployment model. 
 
@@ -126,7 +126,7 @@ Gatling or JMeter
 
 [!['Testing in DevOps'][testing9]][testing9]
 
-## TL;DR
+## Conclusion
 
 Considering the multiple iterations in the Agile/DevOps model, **Testing** is one of the most important phases of software delivery and to fast track the testing process, automated functional & non-functional test-scripts are in high demand. In the ideal scenario, each Agile team may have at least one QA resource who ensures the Testing activities for the current sprint as well as taking care of the existing functionalities through the Regression Tests. It is also very clear that Test Automation is not the responsibility of a DevOps engineer whereas he/she will concentrate only on the **Infrastructure Automation** rather than enhance your **codebase**.
 
