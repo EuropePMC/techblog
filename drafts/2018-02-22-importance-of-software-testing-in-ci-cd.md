@@ -70,7 +70,7 @@ Build Tool – Maven
 
 Schedule and Execution – Jenkins
 
-Automation scripts [browser-based] scripts can be developed in any language and it is not mandatory to use the same technology that the Development team uses.
+Automation scripts (browser-based) can be developed in any language and it is not mandatory to use the same technology that the Development team uses.
 
 ## User Acceptance Testing (UAT)
 
