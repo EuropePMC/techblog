@@ -9,7 +9,7 @@ categories: testing
 
 **Software Testing** is the process of identifying the correctness and quality of a software program. In other words, testing is executing a system or application in order to find software **bugs, defects, errors or unexpected behavior**. 
 
-Software Testing is necessary because we all make mistakes. Some of those mistakes are minor, but others can be expensive or dangerous. Especially while practicing [continuous integration, continuous delivery, or continuous deployment](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd), we need to test everything and anything we produce, because things can always go wrong.
+Software Testing is necessary because we all make mistakes. Some of those mistakes are minor, but others can be expensive or dangerous. Especially while practicing [continuous integration, continuous delivery, or continuous deployment](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd), we need to test anything and everything we produce, because things can always go wrong.
 
 Testing is mainly classified into two types, **Functional Testing** and **Non-functional Testing**.
 
@@ -40,25 +40,19 @@ For the front-end, the [Karma test runner](http://karma-runner.github.io/2.0/ind
 
 ### System Integration Testing
 
-System Integration Testing (SIT) will touch multiple units/components and is a black box Testing method. People who perform this testing do not want to know the logic behind it.
+System Integration Testing (SIT) will touch multiple units/components and is a [black box testing](https://en.wikipedia.org/wiki/Black-box_testing) method. Performing this testing should not require knowledge of the internal workings of the system.
 
-Normally within the Sprint, Manual Testing will be the first step of the **System Integration Test**. Later on, this will convert to an Automated Test script. If there is a dedicated Automation Testing resource available in the Agile team, then an Automation Test script can be developed in parallel to the development activities. The Automated Test script will fast-track the regression testing prior to each release or every commit in the Continuous Integration / Continuous Deployment model. 
+Normally within a sprint, manual testing will be the first phase of the SIT. Later on, this will be converted to an automated test script. If there is a dedicated automation testing resource available in the Agile team, then an automation test script can be developed in parallel to development activities. The automated test script will fast-track the regression testing prior to each release or every commit in the Continuous Integration / Continuous Deployment model. 
 
 #### Tools / Frameworks:
 
-Defect tracking tool – JIRA
-
-Automation Testing tool – Selenium
-
-Automation Framework – Serenity BDD
-
-Programming Language - Java
-
-Unit Testing Framework for Test Automation – JUnit
-
-Build Tool – Maven
-
-Schedule and Execution – Jenkins
+* Defect tracking tool – JIRA
+* Automation Testing tool – Selenium
+* Automation Framework – Serenity BDD
+* Programming Language - Java
+* Unit Testing Framework for Test Automation – JUnit
+* Build Tool – Maven
+* Schedule and Execution – Jenkins
 
 Automation scripts (browser-based) can be developed in any language and it is not mandatory to use the same technology that the Development team uses.
 
