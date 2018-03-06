@@ -24,17 +24,19 @@ Functional testing processes test against the specifications, or functional requ
 In Unit Testing, the scope of testing is limited to a particular unit or component—for example, a specific [API](https://en.wikipedia.org/wiki/Application_programming_interface), [database](https://en.wikipedia.org/wiki/Database), or [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface). 
 
 #### Tips:
-*	Focus on the field level validation
-*	Branch coverage or statement coverage. 
+*	API: Have separate unit tests for individual web services
+*	Database: Create tests to add, edit or remove data
+*	GUI: Focus on field-level validation
+*	Use [branch coverage or statement coverage](https://en.wikipedia.org/wiki/Code_coverage). 
 *	Add some negative tests 
-*	Add, Edit or Remove data from the database if applicable. 
-*	As a best practice, it is more reliable to use ‘mock’ service(s) to write the Unit tests in order to avoid the interdependence between components. 
-*	Think about the data re-usability and clearing off the test data, which is used by the test from the database at end of your test if applicable. 
-*	Have separate Unit Tests for the Web Services
+*	As a best practice, it is more reliable to use 'mock' service(s) to write unit tests, in order to avoid interdependence between components
+*	Think about data re-usability, and clearing any test data from the database at end of your test (if applicable)
 
 #### Tools / Frameworks:
 
-**Junit** and **TestNG** Unit Testing Frameworks are popular for the Java based development environment and for Ruby, **RSpc** is widely used. For the front-end, frameworks like **ember.js** already have an integrated unit testing provision to implement the unit tests. Whereas **Karma** – Test Runner is commonly used in AngularJS-based development environments to run the JavaScript-based Unit Tests. **Mocha** is an alternative for the front-end Unit Testing solution. In the JavaScript world, **Protractor** along with the **Jasmine** unit testing framework (BDD-based) are widely used.
+The [Junit](https://junit.org/junit5/) and [TestNG](http://testng.org/doc/) unit testing frameworks are popular for a Java-based development environment. For Ruby, [RSpec](http://rspec.info/) is widely used. 
+
+For the front-end, the [Karma test runner](http://karma-runner.github.io/2.0/index.html) is commonly used in development environments using AngularJS or Vue.js to run JavaScript-based unit tests. [Protractor](https://www.protractortest.org/#/) and the BDD-based [Jasmine framework](https://jasmine.github.io/) are also widely used. Those using React might prefer [Jest](https://facebook.github.io/jest/), while Ember.js has an integrated unit testing provision. [Mocha](https://mochajs.org/) is yet another JavaScript alternative for front-end unit testing.
 
 ### System Integration Testing
 
