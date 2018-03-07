@@ -7,9 +7,9 @@ categories: testing
 ---
 
 
-**Software Testing** is the process of identifying the correctness and quality of a software program. In other words, testing is executing a system or application in order to find software **bugs, defects, errors or unexpected behavior**. 
+Software testing is the process of identifying the correctness and quality of a software program. In other words, testing is executing a system or application in order to find software bugs, defects, errors or unexpected behavior. 
 
-Software Testing is necessary because we all make mistakes. Some of those mistakes are minor, but others can be expensive or dangerous. Especially while practicing [continuous integration, continuous delivery, or continuous deployment](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd), we need to test anything and everything we produce, because things can always go wrong.
+Software testing is necessary because we all make mistakes. Some of those mistakes are minor, but others can be expensive or dangerous. Especially while practicing [continuous integration, continuous delivery, or continuous deployment](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd), we need to test anything and everything we produce, because things can always go wrong.
 
 Testing is mainly classified into two types, **Functional Testing** and **Non-functional Testing**.
 
@@ -38,6 +38,10 @@ The [Junit](https://junit.org/junit5/) and [TestNG](http://testng.org/doc/) unit
 
 For the front-end, the [Karma test runner](http://karma-runner.github.io/2.0/index.html) is commonly used in development environments using AngularJS or Vue.js to run JavaScript-based unit tests. [Protractor](https://www.protractortest.org/#/) and the BDD-based [Jasmine framework](https://jasmine.github.io/) are also widely used. Those using React might prefer [Jest](https://facebook.github.io/jest/), while Ember.js has an integrated unit testing provision. [Mocha](https://mochajs.org/) is yet another JavaScript alternative for front-end unit testing.
 
+### Sanity Testing
+
+Sanity testing runs before any detailed functional or regression tests and tests basic, integral functionalities of an application. Sanity testing is required to run every commit to make sure critical business functionalities (such as the launching of the application) are not affected by code changes. 
+
 ### System Integration Testing
 
 System Integration Testing (SIT) will touch multiple units/components and is a [black box testing](https://en.wikipedia.org/wiki/Black-box_testing) method. Performing this testing should not require knowledge of the internal workings of the system.
@@ -58,6 +62,10 @@ These tools and frameworks are used by the Europe PMC development team.
 
 Automation scripts can be developed in any language, and it is not mandatory for the testing team to use the same technology that the development team uses.
 
+### Regression Testing
+
+Regression testing ensures that software performs the same functionality in the same way after it is updated or changed. Regression testing should be performed after any code change to a previously developed and tested program, to ensure that new defects have not been introduced.
+
 ### User Acceptance Testing (UAT)
 
 UAT is normally conducted by the actual users of a particular system. There will be end-to-end scenarios for the UAT users to execute to verify system functionalities. In the w[aterfall model](https://en.wikipedia.org/wiki/Waterfall_model), UAT will be conducted only at the end of development, whereas in the Agile model, UAT can be performed at the end of every sprint and feedback given to the team. 
@@ -72,17 +80,31 @@ Software performance testing is used to determine the speed or effectiveness of 
 
 [Gatling](https://gatling.io/) or [JMeter](https://jmeter.apache.org/)
 
+*Sample 'Gatling' Performance Test Results:*
+
+[!['Sample 'Gatling' Performance Test Results:'][testing8]][testing8]
+
 ### Security Testing
 
 Security testing is a technique to determine if an information system protects data and maintains functionality as intended. Its aims should be verifying three basic principles&mdash;confidentiality, integrity, and authentication.
+
+### Compatibility Testing
+
+Compatibility testing involves verifying a service's functionality is the same across various browsers, different browser versions, mobile devices, operating systems, etc.
 
 ### Usability Testing
 
 Usability testing is used in user-centered interaction design to evaluate a product by testing it on users. This is an irreplaceable testing practice, since it gives direct input on how real users use the system. 
 
-## Automating your testing
+## Automating your Testing
 
-**Test Automation** is process of converting the manual test-scripts to automated test scripts using Testing tools like Selenium, Appium, SoapUI, REST-Assured etc. Test Automation will fast track the **Regression Testing** (recommended after the code changes) and it avoids repeated manual testing efforts. It is also more convenient to use  Automated Testing for the **Compatibility Testing**, like verifying the functionality on various browsers, different browser versions, multiple mobile devices, more than one operating system etc.
+Test automation is the process of converting manual test scripts to automated test scripts, using testing tools like [Selenium](https://www.seleniumhq.org/), [Appium](http://appium.io/), [SoapUI](https://www.soapui.org/), [REST-Assured](http://rest-assured.io/), [Serenity](http://www.thucydides.info/#/), [Cucumber](https://cucumber.io/), etc. Test automation will fast-track regression testing, and it avoids repeated and time-consuming manual testing efforts. It is also convenient to use automated testing for compatibility testing.
+
+*Sample Automation / Cucumber-BDD-Serenity Test Report:*
+
+[!['Sample Automation / Cucumber-BDD-Serenity Test Report'][testing7]][testing7]
+
+### Benefits of Automated Testing
 
 *	Faster feedback
 *	Earlier Detection of Defects
@@ -94,33 +116,24 @@ Usability testing is used in user-centered interaction design to evaluate a prod
 *	Simultaneity
 *	Better test coverage with multiple data combinations
 
-[!['Testing in DevOps'][testing2]][testing2]
+### Test Flows, Test Management & Execution Frequency
 
-As per the **Testing Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.
+[!['Sample test flow'][testing5]][testing5]
 
-## Testing Strategy in DevOps culture [Java-based development]
-[!['Testing in DevOps'][testing3]][testing3]
+[!['Example of execution frequency of different types of testing'][testing6]][testing6]
+
+<!--[!['Testing in DevOps'][testing2]][testing2]
+
+As per the **Testing Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.-->
 
 ## Sample Build Pipeline model along with Software Testing steps
 [!['Testing in DevOps'][testing4]][testing4]
 
-In the above build pipeline model, there are three pre-production servers i.e. Development (DEV), Testing and Staging. Normally DEV server will be used for all the development activities, with the Testing or System Integration Server (SIT) for Functional Testing activities for the Quality Assurance (QA) Team and Staging Server for the Performance Testing as well as for the User Acceptance Testing (UAT) activities. On some occasions, there will only be DEV, TEST and PROD servers available. In such cases, internal testing and UAT will happen on the TEST Server itself.
+In the above build pipeline model, there are three pre-production servers, i.e. Development (DEV), Testing (TEST), and Staging. Normally the DEV server will be used for all development activities, with the TEST server for functional testing by the quality assurance team, and the Staging server for performance testing and user acceptance testing. On some occasions, there will only be DEV, TEST and PROD (production) servers available. In such cases, internal testing and UAT will happen on the TEST server as well.
 
-You might have noticed the build pipeline steps ‘Sanity Tests’ & ‘Regression Tests’ from the Pipeline sample displayed above. Sanity Tests consist of critical functionalities of an application and are required to run every commit to make sure the critical business functionalities are not affected. Whereas Regression Tests are the superset of the Sanity Test Suite that will normally run in the Test Environment for every new deployment.
-
-## Test Flows, Test Management & Execution Frequency
-
-[!['Testing in DevOps'][testing5]][testing5]
-
-[!['Testing in DevOps'][testing6]][testing6]
-
-## Sample Automation / Cucumber-BDD-Serenity Test Report
-
-[!['Testing in DevOps'][testing7]][testing7]
-
-## Sample 'Gatling' Performance Test Results 
-
-[!['Testing in DevOps'][testing8]][testing8]
+<!--### Testing Strategy in DevOps culture [Java-based development]
+[!['Testing in DevOps'][testing3]][testing3]
+It is also very clear that Test Automation is not the responsibility of a DevOps engineer whereas he/she will concentrate only on the **Infrastructure Automation** rather than enhance your **codebase**-->
 
 ## Proposed Tools & Framework Summary
 
@@ -152,7 +165,7 @@ You might have noticed the build pipeline steps ‘Sanity Tests’ & ‘Regressi
 
 ## Conclusion
 
-Considering the multiple iterations in the Agile/DevOps model, **Testing** is one of the most important phases of software delivery and to fast track the testing process, automated functional & non-functional test-scripts are in high demand. In the ideal scenario, each Agile team may have at least one QA resource who ensures the Testing activities for the current sprint as well as taking care of the existing functionalities through the Regression Tests. It is also very clear that Test Automation is not the responsibility of a DevOps engineer whereas he/she will concentrate only on the **Infrastructure Automation** rather than enhance your **codebase**.
+Considering the multiple iterations over code in the Agile/DevOps software development model, testing is one of the most important phases of software delivery. To fast-track the testing process, automated functional & non-functional test-scripts are recommended. In the ideal scenario, each Agile team may have at least one QA resource who performs the testing activities for the current sprint, as well as ensuring the preservation of existing functionalities through regression tests.
 
 ### Useful links
 * [Testing Pyramid](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
