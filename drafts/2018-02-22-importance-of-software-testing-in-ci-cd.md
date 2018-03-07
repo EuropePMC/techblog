@@ -168,7 +168,6 @@ It is also very clear that Test Automation is not the responsibility of a DevOps
 Considering the multiple iterations over code in the Agile/DevOps software development model, testing is one of the most important phases of software delivery. To fast-track the testing process, automated functional & non-functional test-scripts are recommended. In the ideal scenario, each Agile team may have at least one QA resource who performs the testing activities for the current sprint, as well as ensuring the preservation of existing functionalities through regression tests.
 
 ### Useful links
-* [Testing Pyramid](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 * [BDD Serenity](http://www.thucydides.info/#/)
 * [Gatling](https://gatling.io/)
 
