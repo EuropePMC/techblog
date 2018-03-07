@@ -127,7 +127,7 @@ Test automation is the process of converting manual test scripts to automated te
 As per the **Testing Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.-->
 
 ## Sample Build Pipeline model along with Software Testing steps
-[!['Testing in DevOps'][testing4]][testing4]
+[!['Sample Build Pipeline model along with Software Testing steps'][testing4]][testing4]
 
 In the above build pipeline model, there are three pre-production servers, i.e. Development (DEV), Testing (TEST), and Staging. Normally the DEV server will be used for all development activities, with the TEST server for functional testing by the quality assurance team, and the Staging server for performance testing and user acceptance testing. On some occasions, there will only be DEV, TEST and PROD (production) servers available. In such cases, internal testing and UAT will happen on the TEST server as well.
 
