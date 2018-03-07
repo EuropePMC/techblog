@@ -13,7 +13,7 @@ Software testing is necessary because we all make mistakes. Some of those mistak
 
 Testing is mainly classified into two types, **Functional Testing** and **Non-functional Testing**.
 
-[!['Types of Functional and Non-functional testing'][testing1]][testing1]
+[![Types of Functional and Non-functional testing][testing1]][testing1]
 
 Functional testing processes test against the specifications, or functional requirements for a system and its components (what the system should *do*), while non-functional testing processes test the operation of that system (how the system should *be*).
 
@@ -82,7 +82,7 @@ Software performance testing is used to determine the speed or effectiveness of 
 
 *Sample 'Gatling' Performance Test Results:*
 
-[!['Sample 'Gatling' Performance Test Results:'][testing8]][testing8]
+[![Sample 'Gatling' Performance Test Results:][testing8]][testing8]
 
 ### Security Testing
 
@@ -102,7 +102,7 @@ Test automation is the process of converting manual test scripts to automated te
 
 *Sample Automation / Cucumber-BDD-Serenity Test Report:*
 
-[!['Sample Automation / Cucumber-BDD-Serenity Test Report'][testing7]][testing7]
+[![Sample Automation / Cucumber-BDD-Serenity Test Report][testing7]][testing7]
 
 ### Benefits of Automated Testing
 
@@ -118,16 +118,16 @@ Test automation is the process of converting manual test scripts to automated te
 
 ### Test Flows, Test Management & Execution Frequency
 
-[!['Sample test flow'][testing5]][testing5]
+[![Sample test flow][testing5]][testing5]
 
-[!['Example of execution frequency of different types of testing'][testing6]][testing6]
+[![Example of execution frequency of different types of testing][testing6]][testing6]
 
 <!--[!['Testing in DevOps'][testing2]][testing2]
 
 As per the **Testing Pyramid** concept displayed above, around 70% of testing efforts are at the Unit Level, approximately 20% at the Integration/Business Layer and 10% at the UI/Front-end layer.-->
 
 ## Sample Build Pipeline model along with Software Testing steps
-[!['Sample Build Pipeline model along with Software Testing steps'][testing4]][testing4]
+[![Sample Build Pipeline model along with Software Testing steps][testing4]][testing4]
 
 In the above build pipeline model, there are three pre-production servers, i.e. Development (DEV), Testing (TEST), and Staging. Normally the DEV server will be used for all development activities, with the TEST server for functional testing by the quality assurance team, and the Staging server for performance testing and user acceptance testing. On some occasions, there will only be DEV, TEST and PROD (production) servers available. In such cases, internal testing and UAT will happen on the TEST server as well.
 
