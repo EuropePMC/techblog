@@ -42,43 +42,43 @@ For the front-end, the [Karma test runner](http://karma-runner.github.io/2.0/ind
 
 System Integration Testing (SIT) will touch multiple units/components and is a [black box testing](https://en.wikipedia.org/wiki/Black-box_testing) method. Performing this testing should not require knowledge of the internal workings of the system.
 
-Normally within a sprint, manual testing will be the first phase of the SIT. Later on, this will be converted to an automated test script. If there is a dedicated automation testing resource available in the Agile team, then an automation test script can be developed in parallel to development activities. The automated test script will fast-track the regression testing prior to each release or every commit in the Continuous Integration / Continuous Deployment model. 
+Normally within a sprint, manual testing will be the first phase of the SIT. Later on, this will be converted to an automated test script. If there is a dedicated automation testing resource available in the Agile team, then an automation test script can be developed in parallel to development activities. The automated test script will fast-track regression testing prior to each release or every commit in the continuous integration / continuous deployment model. 
 
 #### Tools / Frameworks:
 
-* Defect tracking tool – JIRA
-* Automation Testing tool – Selenium
-* Automation Framework – Serenity BDD
-* Programming Language - Java
-* Unit Testing Framework for Test Automation – JUnit
-* Build Tool – Maven
-* Schedule and Execution – Jenkins
+These tools and frameworks are used by the Europe PMC development team.
 
-Automation scripts (browser-based) can be developed in any language and it is not mandatory to use the same technology that the Development team uses.
+* Defect tracking tool &ndash; JIRA
+* Automation Testing tool &ndash; Selenium
+* Automation Framework &ndash; Serenity BDD
+* Programming Language &ndash; Java
+* Unit Testing Framework for Test Automation &ndash; JUnit
+* Build Tool &ndash; Maven
+* Schedule and Execution &ndash; Jenkins
+
+Automation scripts can be developed in any language, and it is not mandatory for the testing team to use the same technology that the development team uses.
 
 ### User Acceptance Testing (UAT)
 
-UAT is normally conducted by the actual users of that particular system. There will be end-to-end scenarios for the UAT users to execute and verify the system functionalities. In the Waterfall model, UAT will be conducted only at the end, whereas in the Agile world, UAT can be performed at the end of every sprint and feedback given to the team. 
+UAT is normally conducted by the actual users of a particular system. There will be end-to-end scenarios for the UAT users to execute to verify system functionalities. In the w[aterfall model](https://en.wikipedia.org/wiki/Waterfall_model), UAT will be conducted only at the end of development, whereas in the Agile model, UAT can be performed at the end of every sprint and feedback given to the team. 
 
 ## Common types of Non-functional Testing
 
 ### Performance Testing
 
-Software performance testing is used to determine the speed or effectiveness of a computer, network, software program or device. This process can involve quantitative tests done in a lab, such as measuring the response time or the number of MIPS (millions of instructions per second) at which a system functions.
-Performance Testing = how fast is the system
-Load Testing = how much volume can the system process?
+Software performance testing is used to determine the speed or effectiveness of a computer, network, software program, or device. This process can involve quantitative tests done in a lab, such as measuring the response time or the number of MIPS (millions of instructions per second) at which a system functions. Performance testing ("How fast is the system?") can also include load testing ("How much volume can the system process?").
 
-#### Tools / Technique
+#### Tools / Frameworks:
 
-Gatling or JMeter
+[Gatling](https://gatling.io/) or [JMeter](https://jmeter.apache.org/)
 
 ### Security Testing
 
-**Security testing** is a **testing** technique to determine if an information system protects data and maintains functionality as intended. It also aims at verifying three basic principles - Confidentiality, Integrity and Authentication.
+Security testing is a technique to determine if an information system protects data and maintains functionality as intended. Its aims should be verifying three basic principles&mdash;confidentiality, integrity, and authentication.
 
 ### Usability Testing
 
-**Usability testing** is a technique used in user-centered interaction design to evaluate a product by **testing** it on users. This can be seen as an irreplaceable usability practice, since it gives direct input on how real users use the system. 
+Usability testing is used in user-centered interaction design to evaluate a product by testing it on users. This is an irreplaceable testing practice, since it gives direct input on how real users use the system. 
 
 ## Automating your testing
 
