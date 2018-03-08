@@ -15,6 +15,8 @@ Testing is mainly classified into two types, **Functional Testing** and **Non-fu
 
 [![Types of Functional and Non-functional testing][testing1]][testing1]
 
+<!--more-->
+
 Functional testing processes test against the specifications, or functional requirements for a system and its components (what the system should *do*), while non-functional testing processes test the operation of that system (how the system should *be*).
 
 ## Common types of Functional Testing
