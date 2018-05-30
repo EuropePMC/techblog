@@ -15,11 +15,11 @@ The literature-data links come in different forms and shapes. An article might b
 Based on their commonalities and use, it made sense for us to start consolidating our datalinks in the Europe PMC  API, as well as in their presentation through the Europe PMC website. To adhere to community standards and allow exchange of data with other providers, we have turned to the Scholix format for scholarly link exchange, which we have helped to shape and have subsequently used to represent datalinks in Europe PMC web services. 
 
 ## Collaborating with Scholix ##
-[Scholix](http://scholix.org/), or Scholarly link exchange, is an initiative is to establish a multi-hub infrastructure to harmonize and enable the exchange of data-literature links between several natural hubs, such as DataCite, CrossRef, or OpenAIRE, in scholarly communities. 
+[Scholix](http://scholix.org/), or **Scho**larly **li**nk e**x**change, is an initiative is to establish a multi-hub infrastructure to harmonize and enable the exchange of data-literature links between several natural hubs, such as DataCite, CrossRef, or OpenAIRE, in scholarly communities. 
 The centerpiece of the Scholix landscape is the [format](http://www.scholix.org/schema) that is used to facilitate link exchange between the hubs and other interested parties. Data links in Scholix format are presented as an “information package”. The package contains information about the two linked objects (e.g. a publication and a dataset), as well as link metadata: date, provider, copyrights, etc.
 
 ![Scholix Hub Architecture][scholix]
-*Figure 1: Scholix hub architecture*
+***Figure 1**: Scholix hub architecture*
 
 Europe PMC is a part of the Research Data Alliance World Data System (RDA/WDS) [Working Group on Scholarly Link Exchange](https://www.rd-alliance.org/groups/rdawds-scholarly-link-exchange-scholix-wg) that has pioneered the Scholix format and the multi hub approach.To consolidate internal data link formats and simplify exchange with external partners we have built the Europe PMC API method for data links around the Scholix format. 
 
@@ -30,7 +30,7 @@ Database cross-references (Links to EBI resources submitted directly to Europe P
 External links (Links submitted through the Europe PMC external links program [plug link]. This is a mixed set, which includes database records, as well as links to lay summaries, press releases and open peer reviews)
 
 ![Interactive API Documentation using Swagger][swagger]
-*Figure 2: Interactive swagger documentation of the datalinks web service method*
+***Figure 2**: Interactive swagger documentation of the datalinks web service method*
 
 The categories and sections are reflected in Europe PMC Swagger-powered RESTful [API documentation](http://europepmc.org/RestfulWebService#meths). If you want to try it out, query https://www.ebi.ac.uk/europepmc/webservices/rest/MED/28818901/datalinks?format=json to retrieve all links associated with the publication PMID:28818901 in JSON format.
 
@@ -39,7 +39,7 @@ For Europe PMC API users, or those who are planning to give the Europe PMC API a
 For the front end users this means having all data links conveniently combined in a single place on the article page - the Data tab. It contains links to supplemental files hosted by the BioStudies database, as well as related data, or data cited in the article.
 
 ![Europe PMC Data Tab Example][scr]
-*Figure 3: The new Europe PMC data tab*
+***Figure 3**: The new Europe PMC data tab*
 
 ## To wrap up ##
 Overall the new data links module not only powered a new user-facing feature (the Data tab), but it also consolidated three existing API methods related to data-literature links into one, simplifying and enabling major front end developments in the future.
