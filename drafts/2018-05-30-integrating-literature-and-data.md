@@ -6,8 +6,6 @@ author: fgraef
 categories: literature-data-integration
 ---
 
-
-# Integrating Literature and Data #
 Data is at the heart of research. Scientific papers describe how data has been obtained, analysed, and what conclusions have been drawn. But it is the data that comprises the essential evidence, which confirms or disproves the original hypothesis. In the life sciences it is essential to look at scientific literature in the context of other publications, the data it builds on and other data linked to the publication. At Europe PMC we have developed a number of features to support data discovery and reuse. 
 
 As one of the [ELIXIR Core Resources](https://www.google.com/url?q=https://europepmc.org/articles/PMC5070591&sa=D&ust=1527611404257000&usg=AFQjCNGDEarF0yK0Ktref2C7QmlslyDnAw), Europe PMC benefits from excellent links to essential research data hubs located at EMBL-EBI.This helps us interweave publications and data, enriching the graph of research objects and help researchers discover linked and related data.
