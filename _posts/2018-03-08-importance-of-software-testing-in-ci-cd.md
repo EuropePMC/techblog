@@ -3,7 +3,7 @@ layout: post
 title:  "The Importance of Software Testing in DevOps"
 date:   2018-03-08
 author: rakesh
-categories: testing
+category: testing
 ---
 
 
