@@ -21,6 +21,8 @@ The centerpiece of the Scholix landscape is the [format](http://www.scholix.org/
 ![Scholix Hub Architecture][scholix]
 ***Figure 1**: Scholix hub architecture*
 
+<!--more-->
+
 Europe PMC is a part of the Research Data Alliance World Data System (RDA/WDS) [Working Group on Scholarly Link Exchange](https://www.rd-alliance.org/groups/rdawds-scholarly-link-exchange-scholix-wg) that has pioneered the Scholix format and the multi hub approach.To consolidate internal data link formats and simplify exchange with external partners we have built the Europe PMC API method for data links around the Scholix format. 
 
 ## Implementing Scholix for Europe PMC ##
