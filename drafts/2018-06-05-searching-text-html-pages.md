@@ -33,12 +33,12 @@ The original annotation text is "Our results revealed a direct interaction betwe
  
  1. The article text is split into sentences after stripping all the HTML tags from it (using an open access [javascript sentencizer][4]).
  2. The fuzzy match algorithm compares the annotations sentences with the list of sentences inside the article. A similarity threshold is defined in order to get only the sentences of the articles that are enough similar to the annotation text. The choice of this threshold is crucial. If it is too restrictive there will be a chance that some true positive matches will be ignored, while if it is too lax there will be a chance that some false positive matches will be found.
- 3. If there’s at least one sentence considered similar enough to the annotation, the sentence with the highest similarity score is taken as a valid match.
+ 3. If there's at least one sentence considered similar enough to the annotation, the sentence with the highest similarity score is taken as a valid match.
  
  As it has been discussed previously there are  two type of annotations inside the Scilite platform:
  
  * Sentence based annotations.
- * Named entity annotations (usually made of one or two worlds) with a prefix and suffix to locate them inside the article.
+ * Named entity annotations (usually made of one/two worlds) with a prefix and suffix to locate them inside the article.
   
 Because of the nature of the fuzzy match algorithm, it can be applied directly only to the sentence based annotations. In this case, we decided to adopt it only if the exact search for the sentence fails because the fuzzy match search is more demanding than an exact search from computational point of view.
  
