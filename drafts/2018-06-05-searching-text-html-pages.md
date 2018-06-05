@@ -38,7 +38,7 @@ The original annotation text is "Our results revealed a direct interaction betwe
  As it has been discussed previously there are  two type of annotations inside the Scilite platform:
  
  * Sentence based annotations.
- * Named entity annotations (usually made of one/two worlds) with a prefix and suffix to locate them inside the article.
+ * Named entity annotations (usually made of one or two worlds) with a prefix and suffix to locate them inside the article.
   
 Because of the nature of the fuzzy match algorithm, it can be applied directly only to the sentence based annotations. In this case, we decided to adopt it only if the exact search for the sentence fails because the fuzzy match search is more demanding than an exact search from computational point of view.
  
