@@ -26,6 +26,7 @@ The text of the annotation contains the character >. The solution adopted was to
 The original annotation text is "Our results revealed a direct interaction between PRL-3 and integrin beta1 and characterized Y783 of integrin beta1 as a bona fide substrate of PRL-3, which is negatively regulated by integrin alfa1." The problem is that the Greek letters alfa and beta are represented in two different ways in the page and in the annotation text. A solution to this problem is applying a fuzzy match approach that is discussed later.
  
 
+## Conclusions ##
 
 Searching plain text in HTML pages presents many challenges due to the nature of HTML rendering (tags, encoding, mismatch characters). An approach to solve them is to introduce techniques to apply some sort of fuzzy matching. However, those techniques can be demanding from performance point of view especially if the HTML pages are long and the number of annotations to locate is big. Therefore, it is necessary to carefully balance accuracy of results and performance deciding when it is  appropriate to apply those strategies.
 
