@@ -25,6 +25,10 @@ The text of the annotation contains the character >. The solution adopted was to
 ***Figure 3**: Annotation containing Greek characters* 
 The original annotation text is "Our results revealed a direct interaction between PRL-3 and integrin beta1 and characterized Y783 of integrin beta1 as a bona fide substrate of PRL-3, which is negatively regulated by integrin alfa1." The problem is that the Greek letters alfa and beta are represented in two different ways in the page and in the annotation text. A solution to this problem is applying a fuzzy match approach that is discussed later.
  
+## Fuzzy Match Strategy ##
+ 
+ The fuzzy match approach we used to solve some of the problems described above is based on the open source Javascript library [Fuse.js][2] . Internally it uses the [Levenshtein distance][3] to compute the similarity score between two strings. This score is computed as the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other
+ 
 
 ## Conclusions ##
 
