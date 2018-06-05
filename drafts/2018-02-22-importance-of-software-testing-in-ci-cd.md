@@ -7,7 +7,7 @@ categories: testing
 ---
 
 
-Software  testing is the process of identifying the correctness and quality of a software program. In other words, testing is executing a system or application in order to find software bugs, defects, errors or unexpected behavior. 
+Software testing is the process of identifying carefully the correctness and quality of a software program. In other words, testing is executing a system or application in order to find software bugs, defects, errors or unexpected behavior. 
 
 Software testing is necessary because we all make mistakes. Some of those mistakes are minor, but others can be expensive or dangerous. Especially while practicing [continuous integration, continuous delivery, or continuous deployment](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd), we need to test anything and everything we produce, because things can always go wrong.
 
