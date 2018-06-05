@@ -27,8 +27,39 @@ The original annotation text is "Our results revealed a direct interaction betwe
  
 ## Fuzzy Match Strategy ##
  
- The fuzzy match approach we used to solve some of the problems described above is based on the open source Javascript library [Fuse.js][2] . Internally it uses the [Levenshtein distance][3] to compute the similarity score between two strings. This score is computed as the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other
+ The fuzzy match approach we used to solve some of the problems described above is based on the open source Javascript library [Fuse.js][2] . Internally it uses the [Levenshtein distance][3] to compute the similarity score between two strings. This score is computed as the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
  
+Because of the nature of the fuzzy match algorithm, it can be applied directly only to the sentence based annotations. In this case, we decided to adopt it only if the exact search for the sentence fails because the fuzzy match search is more demanding than an exact search from computational point of view.
+ 
+The fuzzy match has been proved useful also for matching prefix and postfix of named entity annotations as described in the problem number 4. Even in this case we adopt a fuzzy match prefix/postfix search only if the exact search fails to avoid computational overhead.
+
+We have run some tests to compare the numbers of annotations matched with and without the fuzzy match approach. The sample was made of 8433 full text articles plus 8368 abstracts. The results are the following:
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Fuzzy Match</th>
+<th>Exact Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sentence based</td>
+<td>91.62</td>
+<td>79.1</td>
+</tr>
+<tr>
+<td>Named Entity</td>
+<td>92.11</td>
+<td>86.93</td>
+</tr>
+</tbody>
+</table>
+
+***Table 1**: Fuzzy match approach results* 
+
+As expected, you can see that the fuzzy match approach gives benefits that are more significant in the sentence-based annotations.
 
 ## Conclusions ##
 
