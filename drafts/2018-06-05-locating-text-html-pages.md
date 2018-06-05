@@ -28,7 +28,7 @@ The main challenge for Scilite tool is locating plain text annotations in HTML p
  
  <h2>Fuzzy Match Strategy</h2>
  
- The fuzzy match approach we used to solve some of the problems described above is based on the open source Javascript library [Fuse.js][2] (http://fusejs.io/). Internally it uses the [Levenshtein distance][3](https://en.wikipedia.org/wiki/Levenshtein_distance) to compute the similarity score between two strings. This score is computed as the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other
+ The fuzzy match approach we used to solve some of the problems described above is based on the open source Javascript library [Fuse.js][2] . Internally it uses the [Levenshtein distance][3] to compute the similarity score between two strings. This score is computed as the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other
  
  The approach consists of the following steps:
  
