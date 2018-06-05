@@ -15,7 +15,7 @@ The main challenge for Scilite tool is locating plain text annotations in HTML p
 ***Figure 1**: Annotation containing HTML tags*  
 The problem is caused by the sub tag that it is surrounding the v inside the world Nav1.7. Therefore if you search for an exact match of the plain sentence into the HTML page, that will not be found. The solution adopted was to search for a regular expression built including an optional HTML tag between any two characters of the annotation text. The disadvantage of this approach is that this type of search is much more demanding from a computational point of view than an exact match search. Therefore, we decided to adopt this regular expression search only for sentence-based annotations where the chance of having HTML tags is much higher than named entity annotations composed usually only by one or two words.
  
- 2. **HTML encodes some special characters.** An example is the character >: it is encoded as `>` inside the HTML page. Consider the page http://europepmc.org//abstract/MED/28385055 and click on the "Gene Disease Open Targets" checkbox. 
+ 2. **HTML encodes some special characters.** An example is the character >: it is encoded as `&gt;` inside the HTML page. Consider the page http://europepmc.org//abstract/MED/28385055 and click on the "Gene Disease Open Targets" checkbox. 
  [![Annotation containing HTML encoded characters][image_MED28385055]][image_MED28385055]
 ***Figure 2**: Annotation containing HTML encoded characters*   
 The text of the annotation contains the character >. The solution adopted was to encode the annotation text as it would appear in an HTML page and then perform an exact match search.
