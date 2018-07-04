@@ -10,9 +10,9 @@ category: algorithm
 
 The main challenge for the SciLite tool is locating plain text annotations in HTML pages. The challenges derive from the nature of HTML pages. Below is a list of the major challenges we faced and the solutions adopted to mitigate them.
 
- 1. **The pages contain HTML tags obviously.** For an example consider the page https://europepmc.org/articles/PMC1215513 and click on the "Gene Function" checkbox on the right hand side of the page to see the sentence highlighted. 
+ 1. **The pages contain HTML tags obviously.** For an example consider the page https://europepmc.org/articles/PMC1215513 and click on the "Gene Function" checkbox on the right hand side of the page to see the sentence highlighted. <br/>
  [![Annotation containing HTML tags][image_PMC1215513]][image_PMC1215513]
-***Figure 1**: Annotation containing HTML tags*  
+***Figure 1**: Annotation containing HTML tags*<br/>  
 The problem is caused by the sub tag that it is surrounding the character "v" inside the world Nav1.7. Therefore if you search for an exact match of the plain sentence in the HTML page, it will not be found. Our solution was to search for a regular expression built including an optional HTML tag between any two characters of the annotation text. The disadvantage of this approach is that this type of search is much more computationally demanding than an exact match search. Therefore, we decided to adopt this regular expression search only for sentence-based annotations, where the chance of having HTML tags is much higher than for named entity annotations usually composed of only one or two words.
  
  2. **HTML encodes special characters.** An example is the character ">". It is encoded as `&gt;` inside the HTML page. For an example consider the page http://europepmc.org//abstract/MED/28385055 and click on the "Gene Disease Open Targets" checkbox. 
