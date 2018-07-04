@@ -4,7 +4,7 @@ url: https://europepmc.github.io
 title: Europe PMC Tech Blog
 description: techy stuff from Europe PMC
 google_analytics: UA-114538088-1
-encoding: utf-8
+encoding: utf-16
 collections:
   blog_categories:
     output: true
