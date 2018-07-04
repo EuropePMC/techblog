@@ -25,10 +25,10 @@ The text of the annotation contains the character ">". Our solution was to encod
 ***Figure 3**: Annotation containing Greek characters*<br/><br/>    
 The original annotation text is "Our results revealed a direct interaction between PRL-3 and integrin beta1 and characterized Y783 of integrin beta1 as a bona fide substrate of PRL-3, which is negatively regulated by integrin alfa1." The problem is that the Greek letters alfa and beta are represented in two different ways in the page and in the annotation text. A solution to this problem is applying a fuzzy match approach that is discussed later.
 
- 4. **Special characters are not properly encoded inside the annotation text.** For an example consider the page http://europepmc.org//abstract/AGR/IND605699789, click on the "Organism" checkbox and focus on the annotation "white campion".<br/><br/>
+ 4. **Special characters are not properly encoded inside the annotation text.** For an example consider the page http://europepmc.org/abstract/AGR/IND605699789, click on the "Organism" checkbox and focus on the annotation "white campion".<br/><br/>
  [![Annotation containing not properly encoded characters][image_AGRIND605699789]][image_AGRIND605699789]
 ***Figure 4**: Annotation containing not properly encoded characters*<br/>  
-Every annotation comes with a prefix and suffix text that help to locate it in the article page. The suffix of this annotation is "is subject to preadispersal" with the character a not properly encoded. In this case as well, our solution was to apply the fuzzy match approach mentioned previously.
+Every annotation comes with a prefix and suffix text that help to locate it in the article page. The suffix of this annotation is "is subject to preâdispersal" with the character â not properly encoded. In this case as well, our solution was to apply the fuzzy match approach mentioned previously.
  
 ## Fuzzy Match Strategy ##
  
