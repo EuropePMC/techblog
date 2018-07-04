@@ -18,7 +18,7 @@ The problem is caused by the sub tag that it is surrounding the character "v" in
  2. **HTML encodes special characters.** An example is the character ">". It is encoded as `&gt;` inside the HTML page. For an example consider the page http://europepmc.org//abstract/MED/28385055 and click on the "Gene Disease Open Targets" checkbox.<br/><br/> 
  [![Annotation containing HTML encoded characters][image_MED28385055]][image_MED28385055]
 ***Figure 2**: Annotation containing HTML-encoded characters*<br/>     
-The text of the annotation contains the character ">". Our solution was to encode the annotation text as it would appear in an HTML page and then perform an exact match search.
+The text of the annotation contains the character ">". Our solution was to encode the annotation text as it would appear in an HTML page (replacing > with &gt;) and then perform an exact match search.
  
  3. **Lack of correspondence between the text of the annotation and text inside the HTML page.** For an example consider the page http://europepmc.org/articles/PMC3558359 and click on the "Gene Function" checkbox.<br/><br/>
  [![Annotation containing Greek characters][image_PMC3558359]][image_PMC3558359]
