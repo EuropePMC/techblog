@@ -12,7 +12,7 @@ The main challenge for the SciLite tool is locating plain text annotations in HT
 
  1. **The pages contain HTML tags obviously.** For an example consider the page https://europepmc.org/articles/PMC1215513 and click on the "Gene Function" checkbox on the right hand side of the page to see the sentence highlighted. <br/><br/>
  [![Annotation containing HTML tags][image_PMC1215513]][image_PMC1215513]
-***Figure 1**: Annotation containing HTML tags*<br/>   
+***Figure 1**: Annotation containing HTML tags*<br/><br/>
 The problem is caused by the sub tag that it is surrounding the character "v" inside the world Nav1.7. Therefore if you search for an exact match of the plain sentence in the HTML page, it will not be found. Our solution was to search for a regular expression built including an optional HTML tag between any two characters of the annotation text. The disadvantage of this approach is that this type of search is much more computationally demanding than an exact match search. Therefore, we decided to adopt this regular expression search only for sentence-based annotations, where the chance of having HTML tags is much higher than for named entity annotations usually composed of only one or two words.
  
  2. **HTML encodes special characters.** An example is the character ">". It is encoded as `&gt;` inside the HTML page. For an example consider the page http://europepmc.org//abstract/MED/28385055 and click on the "Gene Disease Open Targets" checkbox.<br/><br/> 
@@ -22,7 +22,7 @@ The text of the annotation contains the character ">". Our solution was to encod
  
  3. **Lack of correspondence between the text of the annotation and text inside the HTML page.** For an example consider the page http://europepmc.org/articles/PMC3558359 and click on the "Gene Function" checkbox.<br/><br/>
  [![Annotation containing Greek characters][image_PMC3558359]][image_PMC3558359]
-***Figure 3**: Annotation containing Greek characters*<br/>    
+***Figure 3**: Annotation containing Greek characters*<br/><br/>    
 The original annotation text is "Our results revealed a direct interaction between PRL-3 and integrin beta1 and characterized Y783 of integrin beta1 as a bona fide substrate of PRL-3, which is negatively regulated by integrin alfa1." The problem is that the Greek letters alfa and beta are represented in two different ways in the page and in the annotation text. A solution to this problem is applying a fuzzy match approach that is discussed later.
 
  4. **Special characters are not properly encoded inside the annotation text.** For an example consider the page http://europepmc.org//abstract/AGR/IND605699789, click on the "Organism" checkbox and focus on the annotation "white campion".<br/><br/>
