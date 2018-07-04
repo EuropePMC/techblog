@@ -28,7 +28,7 @@ The original annotation text is "Our results revealed a direct interaction betwe
  4. **Special characters are not properly encoded inside the annotation text.** For an example consider the page http://europepmc.org/abstract/AGR/IND605699789, click on the "Organism" checkbox and focus on the annotation "white campion".<br/><br/>
  [![Annotation containing not properly encoded characters][image_AGRIND605699789]][image_AGRIND605699789]
 ***Figure 4**: Annotation containing not properly encoded characters*<br/>  
-Every annotation comes with a prefix and suffix text that help to locate it in the article page. The suffix of this annotation is "is subject to preâdispersal" with the character â not properly encoded. In this case as well, our solution was to apply the fuzzy match approach mentioned previously.
+Every annotation comes with a prefix and suffix text that help to locate it in the article page. The suffix of this annotation is "is subject to pre&acirc;dispersal" with the character &acirc; not properly encoded. In this case as well, our solution was to apply the fuzzy match approach mentioned previously.
  
 ## Fuzzy Match Strategy ##
  
