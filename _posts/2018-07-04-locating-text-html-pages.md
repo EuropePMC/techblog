@@ -4,6 +4,7 @@ title:  "A perfect match: locating plain text in HTML pages"
 date:   2018-07-04
 author: francesco
 category: algorithm
+summary: SciLite is a Europe PMC tool that allows biological terms or relations, such as diseases, chemicals or protein interactions, to be highlighted for readers on abstracts and full text articles.
 ---
 
 [SciLite][1] is a Europe PMC tool that allows biological terms or relations, such as diseases, chemicals or protein interactions, to be highlighted for readers on abstracts and full text articles. These terms are identified as annotations by text mining algorithms, developed by a variety of text mining groups.
