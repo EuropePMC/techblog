@@ -15,4 +15,4 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 twitter_username: EuropePMC_news
-title_image: /techblog/images/epmc-techblog-larger.png
+title_image: /techblog/images/epmc-techblog_larger.png
