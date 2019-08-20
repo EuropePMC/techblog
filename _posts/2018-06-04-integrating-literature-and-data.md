@@ -10,11 +10,9 @@ Data is at the heart of research. Scientific papers describe how data has been o
 
 As one of the [ELIXIR Core Resources](https://www.google.com/url?q=https://europepmc.org/articles/PMC5070591&sa=D&ust=1527611404257000&usg=AFQjCNGDEarF0yK0Ktref2C7QmlslyDnAw), Europe PMC benefits from excellent links to essential research data hubs located at EMBL-EBI. This helps us interweave publications and data, enriching the graph of research objects, and help researchers discover linked and related data.
 
-The literature-data links come in different forms and shapes. An article might be citing a DOI for a dataset in a repository, or describe a protein structure cited as an accession number for PDBe database. An publication itself might be cited by a database, such as Flybase or even a Wikipedia article. Europe PMC obtains such literature-data  links in three ways. They might be provided directly by databases at the EBI, submitted by providers participating in Europe PMC [external links program](http://europepmc.org/LabsLink), or picked up directly by our text-mining pipeline that extracts data mentions, such as accession numbers, from research publications.The three link types largely share the same characteristics, but used to be scattered through the Europe PMC website.  They would show up in different locations and were obtained through different web service methods in different formats, even though they all link external content, mostly data, to the publication.
+The literature-data links come in different forms and shapes. An article might be citing a DOI for a dataset in a repository, or describe a protein structure cited as an accession number for PDBe database. An publication itself might be cited by a database, such as Flybase or even a Wikipedia article. Europe PMC obtains such literature-data  links in three ways: <!--more-->they might be provided directly by databases at the EBI; submitted by providers participating in Europe PMC [external links program](http://europepmc.org/LabsLink); or picked up directly by our text-mining pipeline that extracts data mentions, such as accession numbers, from research publications. The three link types largely share the same characteristics, but used to be scattered through the Europe PMC website.  They would show up in different locations and were obtained through different web service methods in different formats, even though they all link external content, mostly data, to the publication.
 
 Based on their commonalities and use, it made sense for us to start consolidating our datalinks in the Europe PMC  API, as well as in their presentation through the Europe PMC website. To adhere to community standards and allow exchange of data with other providers, we have turned to the Scholix format for scholarly link exchange, which we have helped to shape and have subsequently used to represent datalinks in Europe PMC web services. 
-
-<!--more-->
 
 ## Collaborating with Scholix ##
 [Scholix](http://scholix.org/), or **Scho**larly **li**nk e**x**change, is an initiative is to establish a multi-hub infrastructure to harmonize and enable the exchange of data-literature links between several natural hubs, such as DataCite, CrossRef, or OpenAIRE, in scholarly communities. 
@@ -23,7 +21,7 @@ The centerpiece of the Scholix landscape is the [format](http://www.scholix.org/
 ![Scholix Hub Architecture][scholix]
 ***Figure 1**: Scholix hub architecture*
 
-Europe PMC is a part of the Research Data Alliance World Data System (RDA/WDS) [Working Group on Scholarly Link Exchange](https://www.rd-alliance.org/groups/rdawds-scholarly-link-exchange-scholix-wg) that has pioneered the Scholix format and the multi hub approach.To consolidate internal data link formats and simplify exchange with external partners we have built the Europe PMC API method for data links around the Scholix format. 
+Europe PMC is a part of the Research Data Alliance World Data System (RDA/WDS) [Working Group on Scholarly Link Exchange](https://www.rd-alliance.org/groups/rdawds-scholarly-link-exchange-scholix-wg) that has pioneered the Scholix format and the multi hub approach. To consolidate internal data link formats and simplify exchange with external partners we have built the Europe PMC API method for data links around the Scholix format. 
 
 ## Implementing Scholix for Europe PMC ##
 When implementing Scholix format for literature-data links in Europe PMC we had to take into account specific requirements imposed by Europe PMC front end. The Scholix information package provides a core set of metadata, which we have supplemented with custom elements. As mentioned before, data links in Europe PMC come in through three main routes and have some unique specifications. For example, the information package for text-mined accessions in addition to the standard Scholix metadata will include the number of occurrences in text, while a link submitted via External links program might contain an image - e.g. metrics information provided by Altmetrics. In order to preserve this additional information we have embedded Scholix link information package into a hierarchy of categories. One category corresponds to a single resource which hosts the data linked to a publication. For each category (e.g. Uniprot, Wikipedia, Altmetrics) there might be multiple links within the article. Those links are further categorised as sections, depending on the method, which we used to obtain it. Consequently, there are three available sections: 
@@ -48,6 +46,6 @@ Overall the new data links module not only powered a new user-facing feature (th
 Furthermore, using the Scholix format helps make literature-data links available and accessible to data link hubs like Datacite, CrossRef, and OpenAIRE, as well as to individual data scientists using Europe PMC.
 
 
-[scr]: {{ site.baseurl }}/images/posts/integrating-literature-and-data/data-tab-scr.png
-[scholix]: {{ site.baseurl }}/images/posts/integrating-literature-and-data/SCHOLIX.png
-[swagger]: {{ site.baseurl }}/images/posts/integrating-literature-and-data/Swagger.png
+[scr]: {{site.baseurl}}/images/posts/integrating-literature-and-data/data-tab-scr.png
+[scholix]: {{site.baseurl}}/images/posts/integrating-literature-and-data/SCHOLIX.png
+[swagger]: {{site.baseurl}}/images/posts/integrating-literature-and-data/Swagger.png
