@@ -3,7 +3,7 @@ layout: post
 title:  "Europe PMC project for eLife Innovation Sprint 2019"
 date:   2019-08-20
 author: maria
-category: documentation
+category: literature_data_integration
 summary: Europe PMC will participate in the 2019 eLife Innovation Sprint with a proposal to improve the discoverability of relevant scientific preprints.
 ---
 

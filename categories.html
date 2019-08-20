@@ -7,7 +7,7 @@ layout: default
 	  {% assign posts = site.posts | where: "category", category.slug %}
 	  {% assign count = posts | size %}
 	  {% assign latest = posts | first %}
-	  <h2>{{ category.title }}</h2>
+	  <h2>{{ category.name }}</h2>
 	  <p><a href="{{ site.baseurl }}{{ category.url }}">{{ posts | size }} {% if count > 1 %}posts{% else %}post{% endif %}</a></p>
 	</div>
 	<p>Latest: <a href="{{ site.baseurl }}{{ latest.url }}">{{latest.title}}</a></p>

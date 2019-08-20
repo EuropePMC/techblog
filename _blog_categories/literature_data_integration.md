@@ -1,5 +1,5 @@
 ---
 layout: category_page
-name: Literature Data Integration
+name: Literature/Data Integration
 slug: literature_data_integration
 ---
