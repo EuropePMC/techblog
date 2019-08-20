@@ -8,11 +8,13 @@ category: literature_data_integration
 
 Data is at the heart of research. Scientific papers describe how data has been obtained, analysed, and what conclusions have been drawn. But it is the data that comprises the essential evidence, which confirms or disproves the original hypothesis. In the life sciences it is essential to look at scientific literature in the context of other publications, the data it builds on and other data linked to the publication. At Europe PMC we have developed a number of features to support data discovery and reuse. 
 
-As one of the [ELIXIR Core Resources](https://www.google.com/url?q=https://europepmc.org/articles/PMC5070591&sa=D&ust=1527611404257000&usg=AFQjCNGDEarF0yK0Ktref2C7QmlslyDnAw), Europe PMC benefits from excellent links to essential research data hubs located at EMBL-EBI.This helps us interweave publications and data, enriching the graph of research objects and help researchers discover linked and related data.
+As one of the [ELIXIR Core Resources](https://www.google.com/url?q=https://europepmc.org/articles/PMC5070591&sa=D&ust=1527611404257000&usg=AFQjCNGDEarF0yK0Ktref2C7QmlslyDnAw), Europe PMC benefits from excellent links to essential research data hubs located at EMBL-EBI. This helps us interweave publications and data, enriching the graph of research objects, and help researchers discover linked and related data.
 
 The literature-data links come in different forms and shapes. An article might be citing a DOI for a dataset in a repository, or describe a protein structure cited as an accession number for PDBe database. An publication itself might be cited by a database, such as Flybase or even a Wikipedia article. Europe PMC obtains such literature-data  links in three ways. They might be provided directly by databases at the EBI, submitted by providers participating in Europe PMC [external links program](http://europepmc.org/LabsLink), or picked up directly by our text-mining pipeline that extracts data mentions, such as accession numbers, from research publications.The three link types largely share the same characteristics, but used to be scattered through the Europe PMC website.  They would show up in different locations and were obtained through different web service methods in different formats, even though they all link external content, mostly data, to the publication.
 
 Based on their commonalities and use, it made sense for us to start consolidating our datalinks in the Europe PMC  API, as well as in their presentation through the Europe PMC website. To adhere to community standards and allow exchange of data with other providers, we have turned to the Scholix format for scholarly link exchange, which we have helped to shape and have subsequently used to represent datalinks in Europe PMC web services. 
+
+<!--more-->
 
 ## Collaborating with Scholix ##
 [Scholix](http://scholix.org/), or **Scho**larly **li**nk e**x**change, is an initiative is to establish a multi-hub infrastructure to harmonize and enable the exchange of data-literature links between several natural hubs, such as DataCite, CrossRef, or OpenAIRE, in scholarly communities. 
@@ -20,8 +22,6 @@ The centerpiece of the Scholix landscape is the [format](http://www.scholix.org/
 
 ![Scholix Hub Architecture][scholix]
 ***Figure 1**: Scholix hub architecture*
-
-<!--more-->
 
 Europe PMC is a part of the Research Data Alliance World Data System (RDA/WDS) [Working Group on Scholarly Link Exchange](https://www.rd-alliance.org/groups/rdawds-scholarly-link-exchange-scholix-wg) that has pioneered the Scholix format and the multi hub approach.To consolidate internal data link formats and simplify exchange with external partners we have built the Europe PMC API method for data links around the Scholix format. 
 
