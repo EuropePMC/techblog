@@ -4,8 +4,4 @@ layout: default
 
 # Drafts for review
 
-* No draft for review for now
-
-# Drafts to upload/update
-
-* [2017-11-07-behavior-driven-development-in-bioinformatics.html]({{ site.baseurl }}/drafts/2017-11-07-behavior-driven-development-in-bioinformatics.html "Behavior-Driven Development in Bioinformatics") (Yuci will continue to upload it. Sorry about the delay Rakesh :-)
+* [2019-08-20-elife-innovation-sprint]({{ site.baseurl }}/drafts/2019-08-20-elife-innovation-sprint.html "Europe PMC project for eLife Innovation Sprint 2019")
