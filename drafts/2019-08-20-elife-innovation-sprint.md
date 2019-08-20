@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Europe PMC project for eLife Innovation Sprint 2019"
+title:  "Europe PMC project for eLife Innovation Sprint"
 date:   2019-08-20
 author: maria
 category: literature_data_integration
@@ -29,5 +29,5 @@ Our resulting open source package will help select preprints by topic, and displ
 
 This project will benefit from team members with experience using REST APIs, particularly Crossref event data service. It will be essential to get user insights from those reading, posting and commenting on preprints, as well as those selecting preprints for journal clubs. 
 
-If you would like to help us take preprints to the next level, please get in touch.  And for all participants at the eLife Innovation Sprint 2019 interested in preprinting &ndash; we look forward to working together!
+If you would like to help us take preprints to the next level, [please get in touch with Dayane](mailto:dayane@ebi.ac.uk).  And for all participants at the eLife Innovation Sprint 2019 interested in preprinting &ndash; we look forward to working together!
  
