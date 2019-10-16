@@ -5,7 +5,6 @@ layout: default
 
 <h1>Posts in Category: {{ page.name }}</h1>
 {% for post in posts %}
-	{% assign author = site.data.authors[post.author] %}
 	{% assign category = site.blog_categories | where: "slug", post.category %}
 	{% assign category = category[0] %}
 	<section class="post-excerpt">
@@ -13,7 +12,9 @@ layout: default
 	    {{ post.excerpt | replace: '<h3', '<h4'  | replace: 'h3>', 'h4>' | replace: '<h2', '<h3'  | replace: 'h2>', 'h3>' }}
 	    <div class="excerpt-bottom">
 		    <p class="continue"><a href="{{ site.baseurl }}{{ post.url }}">Continue reading &rsaquo;</a></p>
-		    <p class="metadata">Author: <a href="{{ author.web }}" target ="_blank">{{ author.name }}</a></p>
+		    <p class="metadata">Author: {% for author in post.author %}
+        {% assign a = site.data.authors[author] %}
+        <a href="{{ a.web }}" target ="_blank">{{ a.name }}</a>{% if author != post.author and author != post.author.last %}, {% endif %}{% endfor %}</p>
 		</div>
 	</section>
 {% endfor %}

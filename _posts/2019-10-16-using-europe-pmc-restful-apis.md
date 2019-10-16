@@ -2,8 +2,8 @@
 layout: post
 title:  "Using Europe PMC RESTful APIs"
 date:   2019-10-16
-author: dayane
-category: literature-data-integration
+author: ['dayane', 'nurul']
+category: literature_data_integration
 summary: PDBe exposes literature metadata by integrating Europe PMC REST APIs
 ---
 
