@@ -7,7 +7,7 @@ category: literature_data_integration
 summary: A new page connecting the programmatic user community
 ---
 
-##Connecting the programmatic user community
+## Connecting the programmatic user community
 
 Europe PMC makes its open access content and metadata available for building new applications. With a [developer tab](http://europepmc.org/developers) specially designed for programmatic users and with detailed documentation, the aim is to make it easy to integrate Europe PMC APIs into new services and thereby improve life science research.
 <!--more-->
