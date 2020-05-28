@@ -163,3 +163,40 @@ li {
 
 	}
 }
+
+.main-content dl {
+	display: flex;
+	flex-wrap: wrap;
+	dt, dt:first-child, dd {
+		margin: 0;
+		padding: .5em 8px;
+	}
+	dt {
+		margin-right: 4px;
+		width: 20%;
+		text-align: right;
+	}
+	dd {
+		margin-left: auto;
+		width: calc(80% - 4px);
+	}
+	dt:nth-child(4n+1), dt:nth-child(4n+1) + dd {
+	  background-color: #f3f6fa;
+	}
+	@media screen and (max-width: 1010px) {
+		dt {
+			width: 30%;
+		}
+		dd {
+			width: calc(70% - 4px);
+		}
+	}
+	@media screen and (max-width: 540px) {
+		dt {
+			width: 40%;
+		}
+		dd {
+			width: calc(60% - 4px);
+		}
+	}
+}
