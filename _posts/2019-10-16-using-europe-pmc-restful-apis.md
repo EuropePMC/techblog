@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Europe PMC RESTful APIs"
+title:  "PDBe integrates Europe PMC APIs"
 date:   2019-10-16
 author: ['dayane', 'nurul']
 category: literature_data_integration
